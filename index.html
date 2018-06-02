@@ -4,9 +4,68 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+  <body style="background-color: #66CDAA">
+    <header class="main-header">
+      <nav class="site-navigation">
+        <a class="logo">
+          <img src="img/logo.jpg" alt="Логотип">
+        </a>
+        <ul class="main-menu">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery_pay.html">Доставка и оплата</a></li>
+          <li><a href="about_company.html">О компании</a></li>
+        </ul>
+        <div class="serch">Поиск</div>
+        <ul class="user-navigation">
+          <li class="login-link">Вход</li>
+        </ul>
+        <div class="basket">Корзина: пусто</div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Магазин мороженого "Глейси"</h1>
+      <section class="DescriptionShop">
+        <h2 class="visually-hidden">О компании</h2>
+        <b>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+        <ul class="desc-list">
+          <li class="desc-item">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="desc-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качество. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li class="desc-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="desc-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        </ul>
+      </section>
+      <article class="blog">
+        <p class="blog-new">Новое в нашем блоге</p>
+        <h2 class="article-name">10 способов сервировка фруктовых щербетов к столу</h2>
+      </article>
+      <section class="subscription">
+        <h2 class="visually-hidden">Подписка</h2>
+        <p  class="desc-subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <input type="text">
+        <input type="submit" value="Отправить">
+      </section>
+    </main>
+    <footer class="main-footer">
+      <ul class="social">
+        <li><a class="social-button" href="#">Twitter</a></li>
+        <li><a class="social-button" href="#">Instagram</a></li>
+        <li><a class="social-button" href="#">Facebook</a></li>
+        <li><a class="social-button" href="#">Vk</a></li>
+      </ul>
+      <div class="menu-footer">
+        <ul class="menu-footer">
+          <li><a class="suppliers" href="#">Для поставщиков</a></li>
+          <li><a class="production" href="#">О производстве</a></li>
+        </ul>
+        <ul class="menu-footer">
+          <li><a class="documents" href="#">Наши документы</a></li>
+          <li><a class="standards" href="#">Экологические стандарты</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <img src="https://assets.htmlacademy.ru/img/logo.v2.svg" alt="HTML Academy">
+        <p>Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; <time datetime="2017-06-01">2017</time> </p>
+      </div>
+    </footer>
   </body>
 </html>
