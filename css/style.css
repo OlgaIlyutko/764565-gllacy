@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #ffffff;
+  
+  background-color: #849d8f;
+}
+
+.main-menu,
+.user-navigation,
+.desc-list,
+.social, 
+.menu-footer1,
+.menu-footer2,
+.catalog-list {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-menu a:hover,
+.main-menu a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #323232;
+  
+}
+
+.main-menu {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.search,
+.login,
+.basket {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: medium;   /*кажется medium не работает*/
+}
+
+.contact-mode {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.contact-number {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.description-shop {
+  color: #323232;
+  background-image: url("../img/wafer.jpg");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+}
+
+.description-shop h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: medium;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden
+}
+
+.login-popup a{
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  }
+
+.blog {
+  color: #323232;
+  font-weight: medium;
+  background-image: url("../img/strawberry-background.jpg");   
+ /* background-position: center center;*/
+  background-repeat: no-repeat;
+}
+
+.article-name a{
+  font-weight: bold;
+  color: #323232;       /*пришлось прописатьь цвет - от blog почему-то не наследовалось*/
+}
+
+.desc-subscription {
+  color: #323232;
+}
+
+.menu-footer {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.suppliers {
+  font-weight: bold;
+}
+
+.copyright,
+.copyright a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.feedback {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: medium;
+  color: #323232;
+}
+
+.catalog-item {
+  font-weight: medium;
+}
+
+.icecream {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
