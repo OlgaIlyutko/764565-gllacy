@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-
+  
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -19,6 +19,8 @@ body {
 .menu-footer2,
 .catalog-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -39,6 +41,12 @@ a {
   line-height: 18px;
   font-weight: bold;
   text-decoration: underline;
+  
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+
+  
 }
 
 .search,
@@ -53,6 +61,7 @@ a {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+  padding-bottom: 14px;
 }
 
 .contact-number {
@@ -67,6 +76,7 @@ a {
   background-position: 0 0;
   background-repeat: repeat;
   border-radius: 10px;
+   margin-bottom: 40px;
 }
 
 .description-shop h2 {
@@ -86,6 +96,13 @@ a {
   overflow: hidden
 }
 
+.search:hover .search-popup {   /*при появлении формы меню Вход смещается. как это исправить?*/
+  
+  display: block;
+  
+  
+}
+
 .login-popup a{
   font-size: 13px;
   line-height: 24px;
@@ -93,9 +110,11 @@ a {
   }
 
 .blog {
+  width: 560px;     /*ширину поставила как в макете, но выглядит иначе. а соседний блок с подпиской не могу понять - как его сделать, фоном?*/
   color: #323232;
   font-weight: 500;
-  background-image: url("../img/strawberry-background.jpg");   
+  background-image: url("../img/strawberry-background.jpg");  
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
 }
@@ -112,6 +131,10 @@ a {
 .menu-footer {
   font-size: 13px;
   line-height: 18px;
+}
+
+.logo-img {
+  width: 165px;
 }
 
 .suppliers {
@@ -163,3 +186,67 @@ a {
 }
 
 
+.search-popup {
+  display: none;
+}
+
+.login-popup {
+  display: none;
+}
+
+.site-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.logo-menu-container {
+ 
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 27px;
+  padding-bottom: 0px; 
+  
+}
+
+.logo {
+  padding-right: 13px;
+}
+
+.user-navigation-container {
+  display: flex;
+  flex-basis: 246px;
+  justify-content: space-between;
+  padding: 10px 27px;
+  padding-top: 37px; 
+  padding-bottom: 27px; 
+
+  }
+
+.main-menu-item {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.contact-info {
+  text-align: right;
+  vertical-align: top;
+  margin: 0px 27px;
+}
+
+
+
+.contact-info p {
+   margin: 0px;
+}
+
+.blog-subscription-container {
+  display: flex;
+  
+}
+
+.subscription {
+  
+}
