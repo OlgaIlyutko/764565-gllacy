@@ -23,13 +23,12 @@ body {
 
 .block {
   display: block;
-  
+  background-color: #849d8f;
 }
 
 .big-container {
   width: 1200px; 
   margin: 0 auto;
-  background-color: #849d8f;
   padding-left: 27px;
   padding-right: 27px;
   
@@ -48,7 +47,8 @@ body {
 }
 
 a {
-  text-decoration: underline;
+  
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -64,8 +64,7 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-/*  text-decoration: underline;*/
-  
+    
   display: flex;
   justify-content: space-between;
   padding-top: 25px;
@@ -109,7 +108,7 @@ a {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  margin: auto;     /*не понимаю почему, но без этого отсупы огромные*/
+  margin: 0;     
 }
 
 .visually-hidden {
@@ -143,8 +142,8 @@ a {
 .blog {
   width: 560px;    
   font-weight: 500;
-  background-image: url("../img/strawberry-background.jpg");  
-  background-size: cover;
+  background-image: url("../img/strawberry-background2.jpg");  
+  background-position: -51px -224px;    
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-right: 26px;
@@ -157,7 +156,7 @@ a {
   color: #323232;
   font-size: 24px;
   line-height: 30px;
-  /*text-decoration: underline;*/
+  text-decoration: underline;
 }
 
 
@@ -166,6 +165,9 @@ a {
   font-size: 13px;
   line-height: 18px;
   padding-top: 18px;
+  
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo-img {
@@ -183,6 +185,11 @@ a {
   color: #fefefe;
 }
 
+
+.copyright a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .feedback {
   font-size: 24px;
   line-height: 28px;
@@ -191,8 +198,13 @@ a {
 }
 
 .catalog-item h3 {
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
- /* text-decoration: underline;*/
+  margin: 0;
+ 
+  padding-top: 18px;
+  order: 2;
 }
 
 .icecream {
@@ -204,6 +216,7 @@ a {
 .foto-icecream {
   width: 266px;
   border-radius: 50%;
+  
 }
 
 .price {
@@ -211,6 +224,9 @@ a {
   line-height: 45px;
   text-shadow: 1px 1px 10px rgba(50, 50 ,50 , 0.5);
   font-weight: bold;
+  position: absolute;
+  top: 200px;
+  margin: 0;
 }
 
 .kg {
@@ -272,13 +288,13 @@ a {
 
 
 .contact-info p {
-   margin: 0px;
+   margin: 0;
 }
 
 .blog-subscription-container {
   color: #323232;
   display: flex;
-  height: 221px;          /*пришлось указать высоту, иначе низ обрезался...но наверно это как-то иначе решается...*/
+  min-height: 221px;        
   margin-bottom: 40px;
 }
 
@@ -288,7 +304,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
-  padding: 20px 27px;  /*мне неясно - как высчитывать верхний паддинг - делаю на глаз*/
+  padding: 20px 27px;  
 }
 
 
@@ -335,7 +351,7 @@ a {
 
 .map {
   margin-bottom: 18px;
-    /*не удается сдвинуть карту к краю*/ 
+  text-align: center;
 }
 
 
@@ -347,7 +363,7 @@ a {
 }
 
 .social {
-  display: flex;        /*надо было сделать в ряд. можно ли это было сделать не флекс, а чем-то другим?*/
+  display: flex;        
   padding-top: 18px;
 }
 
@@ -355,6 +371,7 @@ a {
 .social img {
   border: 2px solid #c2cec7;
   border-radius: 50%;
+  opacity: 0.75;
  
 }
 
@@ -363,12 +380,7 @@ a {
 }
 
 .copyright p {
-  margin: 0;      /*почему-то отсуп уже был, неясно откуда...пришлось обнулять*/
-}
-
-.menu-footer {
-  display: flex;
-  justify-content: space-between;
+  margin: 0;      
 }
 
 
@@ -387,3 +399,27 @@ a {
 .feedback-popup {
   display: none;
 }
+
+.main-menu-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu-footer a{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  width: 267px;
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+  flex-direction: column;   /*поменяла направление, чтобы текст был под картинкой. в лекции говорили, что это возможно...но как именно это сделтаь- не сказали) */
+}
+
+
