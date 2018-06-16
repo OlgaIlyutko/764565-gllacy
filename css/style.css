@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -7,8 +18,21 @@ body {
   font-weight: normal;
   line-height: 22px;
   color: #ffffff;
+
+}
+
+.block {
+  display: block;
   
+}
+
+.big-container {
+  width: 1200px; 
+  margin: 0 auto;
   background-color: #849d8f;
+  padding-left: 27px;
+  padding-right: 27px;
+  
 }
 
 .main-menu,
@@ -24,7 +48,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #ffffff;
 }
 
@@ -40,7 +64,7 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-  text-decoration: underline;
+/*  text-decoration: underline;*/
   
   display: flex;
   justify-content: space-between;
@@ -76,13 +100,16 @@ a {
   background-position: 0 0;
   background-repeat: repeat;
   border-radius: 10px;
-   margin-bottom: 40px;
+  margin-bottom: 40px;
+  padding: 28px 20px;    
+
 }
 
 .description-shop h2 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
+  margin: auto;     /*не понимаю почему, но без этого отсупы огромные*/
 }
 
 .visually-hidden {
@@ -96,10 +123,14 @@ a {
   overflow: hidden
 }
 
-.search:hover .search-popup {   /*при появлении формы меню Вход смещается. как это исправить?*/
+.search {
+  position: relative;
+}
+
+.search:hover .search-popup {   
   
   display: block;
-  
+  position: absolute;
   
 }
 
@@ -110,27 +141,31 @@ a {
   }
 
 .blog {
-  width: 560px;     /*ширину поставила как в макете, но выглядит иначе. а соседний блок с подпиской не могу понять - как его сделать, фоном?*/
-  color: #323232;
+  width: 560px;    
   font-weight: 500;
   background-image: url("../img/strawberry-background.jpg");  
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+  margin-right: 26px;
+  padding-left: 20px;
+  padding-top: 25px;
 }
 
 .article-name a{
   font-weight: bold;
-  color: #323232;       
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+  /*text-decoration: underline;*/
 }
 
-.desc-subscription {
-  color: #323232;
-}
+
 
 .menu-footer {
   font-size: 13px;
   line-height: 18px;
+  padding-top: 18px;
 }
 
 .logo-img {
@@ -157,7 +192,7 @@ a {
 
 .catalog-item h3 {
   font-weight: 500;
-  text-decoration: underline;
+ /* text-decoration: underline;*/
 }
 
 .icecream {
@@ -194,20 +229,19 @@ a {
   display: none;
 }
 
+
+
 .site-navigation-container {
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  
 }
 
 .logo-menu-container {
  
   display: flex;
   justify-content: space-between;
-  padding: 10px 27px;
-  padding-bottom: 0px; 
+  padding-top: 10px;
+  padding-bottom: 0; 
   
 }
 
@@ -219,7 +253,6 @@ a {
   display: flex;
   flex-basis: 246px;
   justify-content: space-between;
-  padding: 10px 27px;
   padding-top: 37px; 
   padding-bottom: 27px; 
 
@@ -233,7 +266,7 @@ a {
 .contact-info {
   text-align: right;
   vertical-align: top;
-  margin: 0px 27px;
+  
 }
 
 
@@ -243,10 +276,114 @@ a {
 }
 
 .blog-subscription-container {
+  color: #323232;
   display: flex;
-  
+  height: 221px;          /*пришлось указать высоту, иначе низ обрезался...но наверно это как-то иначе решается...*/
+  margin-bottom: 40px;
 }
 
 .subscription {
+  width: 560px;
+  background-image: url("../img/subscription.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 20px 27px;  /*мне неясно - как высчитывать верхний паддинг - делаю на глаз*/
+}
+
+
+
+.desc-list li{
+  display: inline-block;
+  width: 535px;
+  vertical-align: top;
+  margin-top: 15px;
+ 
+  padding-left: 58px;
+  padding-top: 13px;
   
+}
+
+.desc-list li:nth-of-type(2n+1){
+ margin-right: 26px;
+}
+
+.desc-item-icecream {
+  background-image: url("../img/icecream-item.svg");
+  background-repeat: no-repeat;
+}
+
+.desc-item-cow {
+  background-image: url("../img/cow-item.svg");
+  background-repeat: no-repeat;
+}
+
+
+.desc-item-leaf {
+  background-image: url("../img/leaf-item.svg");
+  background-repeat: no-repeat;
+}
+
+.desc-item-temperature {
+  background-image: url("../img/temperature-item.svg");
+  background-repeat: no-repeat;
+}
+
+.article-name {
+  width: 280px;
+}
+
+.map {
+  margin-bottom: 18px;
+    /*не удается сдвинуть карту к краю*/ 
+}
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.social {
+  display: flex;        /*надо было сделать в ряд. можно ли это было сделать не флекс, а чем-то другим?*/
+  padding-top: 18px;
+}
+
+
+.social img {
+  border: 2px solid #c2cec7;
+  border-radius: 50%;
+ 
+}
+
+.social li {
+   padding-right: 12px;
+}
+
+.copyright p {
+  margin: 0;      /*почему-то отсуп уже был, неясно откуда...пришлось обнулять*/
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.menu-footer1 {
+  margin-right: 32px;
+}
+
+.heart {
+  width: 20px;
+  padding-top: 3px;
+  padding-right: 7px;
+  align-self: flex-start;
+}
+
+.feedback-popup {
+  display: none;
 }

@@ -8,6 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="block">
+    <div class="big-container">
     <header class="main-header">
       <nav class="site-navigation">
         <div class="site-navigation-container">
@@ -64,8 +66,8 @@
         <h2>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
         <ul class="desc-list">
           <li class="desc-item-icecream">Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="desc-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качество. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
           <li class="desc-item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="desc-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качество. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
           <li class="desc-item-temperature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
@@ -81,27 +83,33 @@
           <input type="submit" value="Отправить" class="button-send">
         </section>
       </div>
+      <div class="map">
+        <img src="img/map.jpg" alt="Карта проезда">
+      </div>
     </main>
     <footer class="main-footer">
-      <ul class="social">
-        <li><a class="social-button-twitter" href="#">Twitter</a></li>
-        <li><a class="social-button-inst" href="#">Instagram</a></li>
-        <li><a class="social-button-fb" href="#">Facebook</a></li>
-        <li><a class="social-button-vk" href="#">Vk</a></li>
-      </ul>
-      <div class="menu-footer">
-        <ul class="menu-footer1">
-          <li><a class="suppliers" href="#">Для поставщиков</a></li>
-          <li><a class="production" href="#">О производстве</a></li>
+      <div class="footer-container">
+        <ul class="social">
+          <li><a class="social-button-twitter" href="#"><img src="img/tw.svg" alt="Twitter"></a></li>
+          <li><a class="social-button-inst" href="#"><img src="img/inst.svg" alt="Instagram"></a></li>
+          <li><a class="social-button-fb" href="#"><img src="img/fb.svg" alt="Facebook"></a></li>
+          <li><a class="social-button-vk" href="#"><img src="img/vk.svg" alt="Vk"></a></li>
         </ul>
-        <ul class="menu-footer2">
-          <li><a class="documents" href="#">Наши документы</a></li>
-          <li><a class="standards" href="#">Экологические стандарты</a></li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <img src="img/logo-htmlacademy-small.png" alt="HTML Academy">
-        <p>Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; <time datetime="2017-06-01">2017</time> </p>
+        <div class="menu-footer">
+          <img src="img/heart.svg" class="heart">
+          <ul class="menu-footer1">
+            <li><a class="suppliers" href="#">Для поставщиков</a></li>
+            <li><a class="production" href="#">О производстве</a></li>
+          </ul>
+          <ul class="menu-footer2"> 
+            <li><a class="documents" href="#">Наши документы</a></li>
+            <li><a class="standards" href="#">Экологические стандарты</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <img src="img/logo-htmlacademy-small.png" alt="HTML Academy">
+          <p>Сделано в <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; <time datetime="2017-06-01">2017</time> </p>
+        </div>
       </div>
     </footer>
     <section class="feedback-popup">
@@ -120,5 +128,6 @@
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
+      </div> </div>
   </body>
 </html>
