@@ -21,6 +21,12 @@ body {
 
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .block {
   display: block;
   background-color: #849d8f;
@@ -35,6 +41,7 @@ body {
 }
 
 .main-menu,
+.in-main-menu,
 .user-navigation,
 .desc-list,
 .social, 
@@ -47,18 +54,35 @@ body {
 }
 
 a {
-  
   text-decoration: none;
   color: #ffffff;
 }
 
-.main-menu a:hover,
-.main-menu a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  color: #323232;
-  
+.menu-footer a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.menu-footer a:hover,
+.menu-footer a:focus,
+.menu-footer a:active,
+.copyright a:hover,
+.copyright a:focus,
+.copyright a:active
+ {
+  color: #ffbb9c;
+  border-bottom: 1px solid rgba(255, 187, 156, 0.5);
+}
+
+
+
+.menu-border .login-a a:hover,         /*и опять вопрос с вложеннгостью*/
+.menu-border .login-a a:focus,
+.menu-border .login-a a:active {
+  color: #e74d35;
+  border-bottom: 1px solid rgba(231, 77, 53, 0.5);
+}
+
+
 
 .main-menu {
   font-size: 16px;
@@ -68,6 +92,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-top: 25px;
+  
 
   
 }
@@ -77,7 +102,8 @@ a {
 .basket {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;  
+  font-weight: 500; 
+  
 }
 
 .contact-mode {
@@ -111,25 +137,33 @@ a {
   margin: 0;     
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden
 }
 
 .search {
+  width: 32px;
+  height: 32px;
   position: relative;
+  background-color: rgba(255,255,255, 0.3);
+  border-radius: 50%;
 }
 
 .search:hover .search-popup {   
   
   display: block;
-  position: absolute;
+ 
   
 }
 
@@ -168,6 +202,7 @@ a {
   
   display: flex;
   justify-content: space-between;
+  
 }
 
 .logo-img {
@@ -237,19 +272,16 @@ a {
 }
 
 
-.search-popup {
-  display: none;
-}
 
-.login-popup {
-  display: none;
-}
+
+
 
 
 
 .site-navigation-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo-menu-container {
@@ -259,6 +291,7 @@ a {
   padding-top: 10px;
   padding-bottom: 0; 
   
+  
 }
 
 .logo {
@@ -267,16 +300,19 @@ a {
 
 .user-navigation-container {
   display: flex;
-  flex-basis: 246px;
-  justify-content: space-between;
-  padding-top: 37px; 
+  flex-basis: 286px;
+  justify-content: flex-end;
+  padding-top: 32px; 
   padding-bottom: 27px; 
-
-  }
+  flex-wrap: wrap;
+    }
 
 .main-menu-item {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+  max-width: 250px;
+  height: 32px;
 }
 
 .contact-info {
@@ -296,6 +332,7 @@ a {
   display: flex;
   min-height: 221px;        
   margin-bottom: 40px;
+  
 }
 
 .subscription {
@@ -360,11 +397,13 @@ a {
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
+  
 }
 
 .social {
   display: flex;        
   padding-top: 18px;
+  flex-wrap: wrap;
 }
 
 
@@ -376,7 +415,8 @@ a {
 }
 
 .social li {
-   padding-right: 12px;
+  padding-right: 12px;
+  flex-basis: 32px;
 }
 
 .copyright p {
@@ -389,12 +429,7 @@ a {
   margin-right: 32px;
 }
 
-.heart {
-  width: 20px;
-  padding-top: 3px;
-  padding-right: 7px;
-  align-self: flex-start;
-}
+
 
 .feedback-popup {
   display: none;
@@ -404,9 +439,7 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.menu-footer a{
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
+
 
 .catalog-list {
   display: flex;
@@ -419,7 +452,361 @@ a {
   position: relative;
   display: flex;
   margin-bottom: 40px;
-  flex-direction: column;   /*поменяла направление, чтобы текст был под картинкой. в лекции говорили, что это возможно...но как именно это сделтаь- не сказали) */
+  flex-direction: column;   
+  
 }
 
 
+.heart {
+  width: 20px;
+  padding-top: 3px;
+  padding-right: 7px;
+  align-self: flex-start;
+}
+
+.social-button {
+  display:inline-block;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 0.7;
+  border: 2px solid rgba(211, 220, 215, 0.8);
+  
+}
+
+.social-button:hover,
+.social-button:focus {
+  opacity: 0.9;
+  border: 2px solid rgba(211, 220, 215, 1);
+}
+  
+.social-button:active {
+  opacity: 0.5;
+  border: 2px solid rgba(211, 220, 215, 0.6);
+}
+
+
+.suppliers::before {
+  content: "";
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.menu-footer li {
+  max-width: 180px;
+}
+
+.search svg {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  
+}
+
+.menu-border{
+ 
+  padding-left: 42px;
+  padding-right: 15px;
+  padding-top: 8px;
+ 
+  background-color: rgba(255,255,255, 0.3);
+  border-radius: 15px;
+  height: 32px;
+  margin-left: 18px;
+  
+}
+
+
+.social-button-inst {
+  background-image: url("../img/inst.svg"); 
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  padding-right: 35px;
+  padding-top: 35px;
+}
+
+.menu-footer1 li {
+  position: relative;
+  padding-left: 21px;
+}
+
+
+
+
+
+
+
+.search:hover,
+.search:focus,
+.menu-border:hover,
+.menu-border:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+      
+}
+
+.search:hover path,
+.search:focus path, 
+.menu-border:hover path,
+.menu-border:focus path,
+.menu-border:hover polygon,
+.menu-border:focus polugon,
+.menu-border:hover circle,
+.menu-border:focus circle {
+  fill: #000000;
+ }
+
+ .basket:hover polygon,
+ .basket:focus polugon {
+  fill: none;
+}
+
+.menu-border:hover a,
+.menu-border:focus a {
+  color: #000000;
+ 
+}
+
+
+.main-menu-item:hover,
+.main-menu-item:focus  {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+.main-menu-item:active {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: inset 0px 3px 3px 0px rgba(0 ,0 ,0 , 0.5);
+}
+  
+.main-menu-item:hover a,      /*иначе текст не красит*/
+.main-menu-item:focus a {
+  border-bottom: none;
+  color: #000000;
+}
+
+
+
+.in-main-menu {
+  position: absolute;
+  display: none;
+  top: 37px;
+  left: -8px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.main-menu li:first-of-type:hover .in-main-menu,
+.main-menu li:first-of-type:focus .in-main-menu {  /*какая тут вложенность?*/
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+}
+
+.in-main-menu-item {
+  padding: 9px 20px;
+  white-space: nowrap;
+}
+
+.in-main-menu li:first-of-type {
+  padding-bottom: 11px;
+  
+}
+
+.in-main-menu li:first-of-type :after {  /*не могу придумать - чем линию нарисовать*/
+  content: "";
+  position: absolute;
+  top: 10px;
+}
+
+.in-main-menu-item:hover,
+.in-main-menu-item:focus {
+  background-color: #fbded8;
+ }
+
+.in-main-menu li:first-of-type:hover,
+.in-main-menu li:first-of-type:focus {
+  border-radius: 5px 5px 0 0;
+}
+
+.in-main-menu li:last-of-type:hover,
+.in-main-menu li:last-of-type:focus {
+  border-radius: 0 0 5px 5px;
+}
+
+.in-main-menu-item:active {
+  background-color: #f7b5a5;
+ }
+
+
+.in-main-menu li:not(:first-of-type) {
+  font-weight: normal;
+  
+}
+
+.user-navigation svg {
+  position: absolute;
+  top: -1px;
+  left: -27px;
+}
+
+.basket svg {
+  position: absolute;
+  top: -1px;
+  left: -27px;
+}
+
+.basket-link {
+    position: relative;
+}
+
+.popup-style {
+  position: absolute;
+  padding: 20px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  
+  display: none;
+  top: 35px;
+  right: 0px;
+  
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.user-navigation:hover login-popup{
+  position: absolute;
+  display: block;
+}
+
+.user-navigation {
+  position: relative;
+}
+
+.user-navigation:hover .login-popup {
+    display: block;
+ }
+
+.login-link {
+  position: relative;
+}
+
+.login-popup h2, 
+.login-popup p {
+  margin: 0;
+}
+
+.login-popup form>p {    /*а тут вложенность 3 ?*/
+  padding-bottom: 20px;
+  
+}
+
+
+
+
+
+
+
+.login-a {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 4px;
+ }
+
+.login-button button {
+  display: inline-block;
+}
+
+.login-popup {
+  width: 277px;
+}
+
+
+
+.popup-style input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 13px;
+  font-weight: bold;
+  
+}
+
+.search-popup {
+  width: 342px;
+}
+
+.popup-style input:hover,
+.popup-style input:focus {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  margin: -1px;
+}
+
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 26px;
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 23px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+
+
+.login-a a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.button:hover,
+.button:focus {
+  background: #ef7862;
+  box-shadow: 0 2px 2px rgb(172, 16, 0);
+}
+
+.button:active {
+  background: linear-gradient(to top, #f26843 0%, #e74a35 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.twitter {
+   background-image: url("../img/tw.svg"); 
+}
+
+.inst {
+   background-image: url("../img/inst.svg"); 
+}
+
+.fb {
+   background-image: url("../img/fb.svg"); 
+}
+
+.vk {
+   background-image: url("../img/vk.svg"); 
+}
+
+
+
+.current-page>a {       
+  border-bottom: none ;  
+  color: #ffffff;
+ }
+
+.current-page {       
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  background-color: #d07058;
+}
