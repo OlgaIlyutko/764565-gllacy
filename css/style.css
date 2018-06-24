@@ -75,7 +75,7 @@ a {
 
 
 
-.menu-border .login-a a:hover,         /*и опять вопрос с вложеннгостью*/
+.menu-border .login-a a:hover,         /*какая тут вложенность?*/
 .menu-border .login-a a:focus,
 .menu-border .login-a a:active {
   color: #e74d35;
@@ -615,13 +615,19 @@ input[type="radio"].visually-hidden {
 
 .in-main-menu li:first-of-type {
   padding-bottom: 11px;
+  position: relative;
   
 }
 
-.in-main-menu li:first-of-type :after {  /*не могу придумать - чем линию нарисовать*/
+.in-main-menu li:first-of-type::after {  /*не могу придумать - чем линию нарисовать*/
   content: "";
   position: absolute;
-  top: 10px;
+  display: block;
+  top: 37px;
+  left: 6px;
+  width: 142px;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .in-main-menu-item:hover,
@@ -733,7 +739,10 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   padding: 13px;
   font-weight: bold;
-  
+}
+
+.popup-style input::placeholder {
+  font-weight: normal;
 }
 
 .search-popup {
@@ -747,6 +756,11 @@ input[type="radio"].visually-hidden {
 }
 
 
+.popup-style input:focus {
+  outline: none;
+  border: 2px solid #91bdec;
+  margin: -1px;
+}
 
 
 
