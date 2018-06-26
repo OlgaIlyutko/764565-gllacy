@@ -18,7 +18,10 @@
               <img src="img/logo.png" alt="Логотип" class="logo-img">
             </a>
             <ul class="main-menu">
-              <li class="main-menu-item" style="position:relative;"><a href="catalog.html">Каталог
+              <li class="main-menu-item" style="position:relative;">
+                <div class="pseudo-area"></div>
+                <a href="catalog.html">Каталог
+                  
                 <ul class="in-main-menu">
                   <li class="in-main-menu-item" style="position:relative;"><a href="#">Новинки</a></li>
                   <li class="in-main-menu-item"><a href="#">Сливочное</a></li>
@@ -28,7 +31,7 @@
                 </ul>
                 </a>
               </li>
-              <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
+              <li class="main-menu-item"><a href="#" class="underlined">Доставка и оплата</a></li>
               <li class="main-menu-item"><a href="#">О компании</a></li>
           </ul>
           </div>
@@ -45,6 +48,7 @@
                   </g>
                 </svg>
               </a>
+              <div class="pseudo-area"></div>
               <section class="search-popup popup-style">
                 <h2 class="visually-hidden">Поиск</h2>
                   <input type="search" name="search" id="search-form" placeholder="Что ищем?">
@@ -62,13 +66,14 @@
                   </svg>
                  Вход</a>
               </li>
+              <div class="pseudo-area"></div>
               <section class="login-popup popup-style">
                     <h2 class="visually-hidden">Авторизация</h2>
                     <form action="https://echo.htmlacademy.ru" method="post">
-                      <p>
+                      <p class="login-input">
                         <input type="email" name="email" id="login-form" placeholder="Электронная форма">
                       </p>
-                      <p>
+                      <p class="login-input">
                         <input type="password" name="password" placeholder="Пароль">
                       </p>
                       <div class="login-button">

@@ -75,13 +75,9 @@ a {
 
 
 
-.menu-border .forget-password:hover,         /*уменьшила вложенность, без menu-border почему-то не работает*/
-.menu-border .forget-password:focus,
-.menu-border .forget-password:active,
-.menu-border .new-user:hover,         
-.menu-border .new-user:focus,
-.menu-border .new-user:active 
-{
+.menu-border .login-a a:hover,         /*какая тут вложенность?*/
+.menu-border .login-a a:focus,
+.menu-border .login-a a:active {
   color: #e74d35;
   border-bottom: 1px solid rgba(231, 77, 53, 0.5);
 }
@@ -95,8 +91,7 @@ a {
     
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
+  padding-top: 25px;
   
 
   
@@ -237,14 +232,13 @@ input[type="radio"].visually-hidden {
   color: #323232;
 }
 
-.catalog-item-hover>a {
+.catalog-item h3 {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 500;
   margin: 0;
-  text-align: center;
-  font-weight: normal;
-  margin: 10px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);   
+ 
+  padding-top: 18px;
   order: 2;
 }
 
@@ -308,17 +302,17 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-basis: 286px;
   justify-content: flex-end;
-  padding-top: 30px; 
-  padding-top: 30px; 
+  padding-top: 32px; 
   padding-bottom: 27px; 
   flex-wrap: wrap;
     }
 
-.main-menu-item>a {
-  
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  margin: 0 17px;  
-
+.main-menu-item {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+  max-width: 250px;
+  height: 32px;
 }
 
 .contact-info {
@@ -403,7 +397,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
-  position: relative;
   
 }
 
@@ -442,7 +435,9 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-
+.main-menu-item a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 
 
 
@@ -453,12 +448,11 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
-  width: 290px;
+  width: 267px;
   position: relative;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 8px;
-  margin-bottom: 30px;
+  display: flex;
+  margin-bottom: 40px;
+  flex-direction: column;   
   
 }
 
@@ -578,35 +572,22 @@ input[type="radio"].visually-hidden {
  
 }
 
-.main-menu-item>a:not([href]) {       
-  background-color: #d07058;
+
+.main-menu-item:hover,
+.main-menu-item:focus  {
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  padding: 6px 17px;
-  margin: 0;
-  border-bottom: none;
 }
 
-.main-menu-item:hover>a,
-.main-menu-item:focus>a,
-.main-menu-item>a:hover,
-.main-menu-item>a:focus {
+.main-menu-item:active {
   background-color: rgba(255, 255, 255, 0.9);
- border-radius: 15px;
-  padding: 6px 17px;
- margin: 0;
-}
-
-.main-menu-item>a:active {          /*кому состояние вешать? li или a*/
-  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
   box-shadow: inset 0px 3px 3px 0px rgba(0 ,0 ,0 , 0.5);
-  border-radius: 15px;
-  padding: 6px 17px;
-  margin: 0;
 }
   
-.main-menu-item:hover a,     
+.main-menu-item:hover a,      /*иначе текст не красит*/
 .main-menu-item:focus a {
- /* border-bottom: none;*/
+  border-bottom: none;
   color: #000000;
 }
 
@@ -615,13 +596,13 @@ input[type="radio"].visually-hidden {
 .in-main-menu {
   position: absolute;
   display: none;
-  top: 28px;
+  top: 37px;
   left: -8px;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
-.main-menu-item:hover .in-main-menu,
-.main-menu-item:focus .in-main-menu {  
+.main-menu li:first-of-type:hover .in-main-menu,
+.main-menu li:first-of-type:focus .in-main-menu {  /*какая тут вложенность?*/
   display: block;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
@@ -638,7 +619,7 @@ input[type="radio"].visually-hidden {
   
 }
 
-.in-main-menu li:first-of-type::after {  
+.in-main-menu li:first-of-type::after {  /*не могу придумать - чем линию нарисовать*/
   content: "";
   position: absolute;
   display: block;
@@ -695,7 +676,6 @@ input[type="radio"].visually-hidden {
   padding: 20px 15px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
-  z-index: 2;
   
   display: none;
   top: 35px;
@@ -726,10 +706,14 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.login-input {    
+.login-popup form>p {    /*а тут вложенность 3 ?*/
   padding-bottom: 20px;
   
 }
+
+
+
+
 
 
 
@@ -830,90 +814,13 @@ input[type="radio"].visually-hidden {
 
 
 
+.current-page>a {       
+  border-bottom: none ;  
+  color: #ffffff;
+ }
 
-.main-menu li:last-of-type {
-  margin-right: 0;
-}
-
-.main-menu>li {
-  margin-right: 3px;
-}
-
-.pseudo-area {
-  position: absolute;
-  width: 100px;
-  height: 20px;
-  
-  background-color: rgba(255,255,255,0);
-  
-   top: 25px;
-   right: 0;
-}
-
-
-
-
-
-
-.footer-container::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -20px;
-  left: 0;
-  width: 1150px;
-  height: 1px;
-  border-bottom: 1px solid rgba(255,255,255, 0.5);
-}
-
-.catalog-item-hover:hover,
-.catalog-item-hover:focus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-  background-color: rgba(255,255,255, 0.2);
-  display: flex;
-  flex-direction: column; 
-  padding-top: 8px;
-      padding-left: 4px;
-    padding-right: 4px;
-}
-
-.catalog-item:hover .img-button,
-.catalog-item:focus .img-button {
-  display: block;
-  z-index: 2;
-}
-
-.catalog-item .button {
-  display: none;
-}
-
-.img-button {
-  text-shadow: 1px 1px 10px rgba(50, 50 ,50 , 0.5);
-  font-weight: bold;
- /* position: absolute;
-  
-  top: 330px;
-  left: 33px;*/
-  
-  order: 3;
-  margin: 15px 0;
-  
-  
-}
-
-.catalog-item-hover {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  z-index: 1;
-}
-
-.icecream-container {
-  width: 1200px; 
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.current-page {       
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  background-color: #d07058;
 }
