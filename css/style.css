@@ -30,6 +30,7 @@ img {
 .block {
   display: block;
   background-color: #849d8f;
+  min-width: 1200px;
 }
 
 .big-container {
@@ -77,10 +78,10 @@ a {
 
 .menu-border .forget-password:hover,         /*уменьшила вложенность, без menu-border почему-то не работает*/
 .menu-border .forget-password:focus,
-.menu-border .forget-password:active,
 .menu-border .new-user:hover,         
 .menu-border .new-user:focus,
-.menu-border .new-user:active 
+.article-name a:hover,
+.article-name a:focus
 {
   color: #e74d35;
   border-bottom: 1px solid rgba(231, 77, 53, 0.5);
@@ -195,7 +196,8 @@ input[type="radio"].visually-hidden {
   color: #323232;
   font-size: 24px;
   line-height: 30px;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 
@@ -235,6 +237,7 @@ input[type="radio"].visually-hidden {
   line-height: 28px;
   font-weight: 500;
   color: #323232;
+  padding-bottom: 20px;
 }
 
 .catalog-item-hover>a {
@@ -244,8 +247,9 @@ input[type="radio"].visually-hidden {
   text-align: center;
   font-weight: normal;
   margin: 10px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);   
+ /*border-bottom: 1px solid rgba(255, 255, 255, 0.5);   */
   order: 2;
+  text-decoration: underline;
 }
 
 .icecream {
@@ -439,7 +443,15 @@ input[type="radio"].visually-hidden {
 
 
 .feedback-popup {
-  display: none;
+ /* display: none;*/
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  width: 480px;
+  padding: 22px;
+  margin-left: -240px;
+  
+
 }
 
 
@@ -691,17 +703,13 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-style {
-  position: absolute;
-  padding: 20px 15px;
+
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   z-index: 2;
-  
-  display: none;
-  top: 35px;
-  right: 0px;
-  
+  /*display: none;*/
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+  
 }
 
 .user-navigation:hover login-popup{
@@ -745,34 +753,54 @@ input[type="radio"].visually-hidden {
 
 .login-popup {
   width: 277px;
+  position: absolute;
+  padding: 20px 15px;
+  top: 35px;
+  right: 0px;
 }
 
 
 
-.popup-style input {
+.popup-style input,
+.popup-style textarea {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 13px;
   font-weight: bold;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
 }
 
-.popup-style input::placeholder {
+.popup-style input::placeholder,
+.popup-style textarea::placeholder {
   font-weight: normal;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
 }
 
 .search-popup {
   width: 342px;
+  position: absolute;
+  padding: 20px 15px;
+  top: 35px;
+  right: 0px;
 }
 
 .popup-style input:hover,
-.popup-style input:focus {
+.popup-style textarea:hover
+ {
   border: 2px solid rgba(0, 0, 0, 0.2);
   margin: -1px;
+  box-sizing: border-box;
+  
 }
 
 
-.popup-style input:focus {
+
+.popup-style input:focus,
+.popup-style textarea:focus
+{
   outline: none;
   border: 2px solid #91bdec;
   margin: -1px;
@@ -792,7 +820,7 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
-  margin-right: 20px;
+  
 }
 
 
@@ -855,7 +883,7 @@ input[type="radio"].visually-hidden {
 
 
 
-.footer-container::before {
+.inner .footer-container::before {
   content: "";
   position: absolute;
   display: block;
@@ -867,17 +895,24 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-hover:hover,
-.catalog-item-hover:focus {
+.catalog-item-hover:focus 
+{
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 5px;
-  background-color: rgba(255,255,255, 0.2);
+
   display: flex;
   flex-direction: column; 
   padding-top: 8px;
-      padding-left: 4px;
-    padding-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 100%;
+}
+
+.catalog-item:hover .catalog-item-hover,
+.catalog-item:focus .catalog-item-hover {
+  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.2);
 }
 
 .catalog-item:hover .img-button,
@@ -916,4 +951,63 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.feedback-popup h2,
+.feedback-popup p {
+ margin: 0;
+ 
+}
+
+.feedback-popup p{
+  padding-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 22px;
+  height: 22px;
+  background-color: rgba(0,0,0, 0);
+  font-size: 0;
+
+  border: 0;
+
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 2px;
+  background-color: #323232;
+  top: 10px;
+  left: 2px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.feedback-popup input {
+  width: 270px;
+}
+
+.feedback-popup textarea {
+  height: 155px;
+  width: 430px;
+}
+
+.login-button button {
+  margin-right: 20px;
+}
+
+.feedback-popup button {
+  float: right;
 }
