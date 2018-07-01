@@ -31,8 +31,35 @@ img {
   display: block;
   background-color: #849d8f;
   min-width: 1200px;
+  
+  
+  height: auto;
+  background-image: url("../img/two-icecreams-01.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  /*transition: background-image 0.5s ease, background-color 0.5s ease;*/
 }
 
+.inner .block{
+  background-image: none;
+  
+}
+
+.block::before,
+.block::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.block::before {
+  background-image: url("../img/two-icecreams-02.png");
+}
+
+.block::after {
+  background-image: url("../img/two-icecreams-03.png");
+  
+}
 .big-container {
   width: 1200px; 
   margin: 0 auto;
@@ -185,7 +212,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/strawberry-background2.jpg");  
   background-position: -51px -224px;    
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-right: 26px;
   padding-left: 20px;
   padding-top: 25px;
@@ -350,7 +377,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/subscription.png");
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px 27px;  
 }
 
@@ -527,8 +554,9 @@ input[type="radio"].visually-hidden {
   
 }
 
-.menu-border{
+.menu-border {
  
+  
   padding-left: 42px;
   padding-right: 15px;
   padding-top: 8px;
@@ -537,6 +565,20 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
   height: 32px;
   margin-left: 18px;
+  
+}
+
+.menu-border-filter {
+ 
+  padding-left: 15px;
+ 
+  padding-right: 15px;
+  padding-top: 9px;
+ 
+  background-color: rgba(255,255,255, 0.3);
+  border-radius: 18px;
+  height: 36px;
+ 
   
 }
 
@@ -707,7 +749,7 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   z-index: 2;
-  /*display: none;*/
+  display: none;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
   
 }
@@ -790,9 +832,7 @@ input[type="radio"].visually-hidden {
 .popup-style input:hover,
 .popup-style textarea:hover
  {
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  margin: -1px;
-  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
   
 }
 
@@ -802,8 +842,9 @@ input[type="radio"].visually-hidden {
 .popup-style textarea:focus
 {
   outline: none;
-  border: 2px solid #91bdec;
-  margin: -1px;
+  border: 1px solid #91bdec;
+  box-shadow: inset 0 0 0 1px #91bdec; 
+             
 }
 
 
@@ -1001,8 +1042,7 @@ input[type="radio"].visually-hidden {
 
 .feedback-popup textarea {
   height: 155px;
-  width: 430px;
-}
+ }
 
 .login-button button {
   margin-right: 20px;
@@ -1010,4 +1050,424 @@ input[type="radio"].visually-hidden {
 
 .feedback-popup button {
   float: right;
+}
+
+.inner .basket {
+  background-color: rgba(255, 255, 255, 0.9);
+  
+}
+
+.inner .basket-link {
+  color: #000000;
+}
+
+.inner .basket path,        /*слишком большая вложенность*/
+.inner .basket circle {
+  fill: #000000;
+}
+
+.inner .basket polygon {
+  fill: red;
+}
+
+#product1:checked ~ .block{
+  background-color: #849d8f;
+  background-image: url("../img/two-icecreams-01.png");
+}
+
+#product2:checked ~ .block{
+  background-color: #8996a6;
+  background-image: url("../img/two-icecreams-02.png");
+
+}
+
+#product3:checked ~ .block {
+  background-color: #9d8b84;
+  background-image: url("../img/two-icecreams-03.png");
+
+}
+
+
+.slider {
+  position: relative;
+  
+  padding-top: 321px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+}
+
+.slider a {
+  display: inline-block;
+  
+}
+
+.slider-item {
+  text-align: center;
+  display: none;
+}
+
+#product1:checked~.block #slide1,
+#product2:checked~.block #slide2,
+#product3:checked~.block #slide3 {
+  display: block;
+  }
+
+
+#product1:checked ~ .block label[for="product1"],
+#product2:checked ~ .block label[for="product2"],
+#product3:checked ~ .block label[for="product3"] {
+  background-color: #ffffff;
+}
+
+.slider-control {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 20;
+  
+  font-size: 0;
+
+
+}
+
+.slider-control label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-item h3 {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+.slide-button {
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  border-radius: 50px;
+   padding: 12px 44px;
+}
+
+.raspberries {
+  background: url("../img/raspberries-background.jpg") no-repeat;
+  flex-grow: 1;
+  margin-right: 26px;
+}
+
+.chocolate {
+    background: url("../img/chocolate-background.jpg") no-repeat;
+  flex-grow: 1;
+}
+
+.sale-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  
+  
+}
+
+
+
+.sale-flex div {
+  width: 560px; 
+  height: 229px;
+  border-radius: 15px;
+}
+
+.sale-style {
+  padding: 20px;
+}
+
+.sale h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  padding-bottom: 15px;
+}
+
+.sale p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 40px;
+}
+
+.sale a {
+  float: right;
+}
+
+.filter {
+  margin-bottom: 40px;
+}
+
+.filter-item {
+  display: inline-block;
+  border: none;
+  margin-right: 10px;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif; 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+}
+
+
+
+.f-fat label {
+ 
+  position: relative;
+  padding-left: 30px;
+
+}
+
+
+.f-fat label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+
+}
+
+
+#fat1:checked ~ label[for="fat1"]::after,   /*какая тут вложенность*/
+#fat2:checked ~ label[for="fat2"]::after,
+#fat3:checked ~ label[for="fat3"]::after,
+#fat4:checked ~ label[for="fat4"]::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.fat-item {
+  display: inline-block;
+}
+
+.filter-item div:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.bar {
+   width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls {
+  position: relative;
+  top: 10px;
+  
+  height: 36px;
+  
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+ /* background-color: #f1f1f1;
+  
+  border-radius: 5px;*/
+}
+
+.toggle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+}
+
+.toggle-min {
+  left: 18px;
+}
+
+.toggle-max {
+  left: 118px;
+}
+
+
+
+.form-filter {
+  width: 900px;
+  margin-bottom: 40px;
+}
+
+.content-item {
+  display: inline-block;
+}
+
+.f-content label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.f-content label {
+   position: relative;
+   padding-left: 30px;
+   
+}
+
+.f-content input[type="checkbox"],
+.f-fat input[type="radio"] {
+  display: none;
+}
+
+#content1:checked ~ label[for="content1"]::after,   /*какая тут вложенность*/
+#content2:checked ~ label[for="content2"]::after,
+#content3:checked ~ label[for="content3"]::after,
+#content4:checked ~ label[for="content4"]::after,
+#content5:checked ~ label[for="content5"]::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  width: 10px;
+  height: 17px;
+  
+  border-bottom: 3px solid  rgba(255, 255, 255, 0.8);
+  border-right: 3px solid  rgba(255, 255, 255, 0.8);
+ 
+  transform: rotate(45deg);
+}
+
+.form-filter legend {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+}
+
+.form-filter .f-sort {
+  font-family: "Roboto", Arial, sans-serif; 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  padding-top: 0;
+  
+}
+
+
+
+
+
+
+
+
+
+.price-controls {
+  position: absolute;
+  top: -32px;
+  left: 50px;
+  width: 200px;
+}
+
+.label-price {
+  display: inline-block;
+ 
+}
+
+.price-controls input {
+  width: 40px;
+}
+
+f-price {
+  
+}
+
+.price-controls input {
+  border: none;
+  background: #849d8f;
+}
+
+.f-price {
+  width: 200px;
+}
+
+.f-content {
+  margin-top: 20px;
+}
+
+
+
+.f-button {
+  padding: 0 25px;
+  
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  
+  font-family: "Roboto", Arial, sans-serif; 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.f-button:hover {
+  
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232;
+ 
+}
+
+.f-button:active {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  color: #323232;
+  margin: -1px;
+  /*box-shadow: 0 -1px 0 1px rgba(255, 255, 255, 0.8)*/
 }

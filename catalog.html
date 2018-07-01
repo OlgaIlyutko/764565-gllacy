@@ -69,10 +69,10 @@
               <section class="login-popup popup-style">
                     <h2 class="visually-hidden">Авторизация</h2>
                     <form action="https://echo.htmlacademy.ru" method="post">
-                      <p>
+                      <p class="login-input">
                         <input type="email" name="email" id="login-form" placeholder="Электронная форма">
                       </p>
-                      <p>
+                      <p class="login-input">
                         <input type="password" name="password" placeholder="Пароль">
                       </p>
                       <div class="login-button">
@@ -100,7 +100,7 @@
                   <polygon fill="none" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
                 </g>
                 </svg>
-              Пусто</a>
+              2 товара</a>
             </div>
           </div>
         </div>
@@ -114,6 +114,86 @@
     <main>
       <div class="big-container">
       <h1 class="icecream">Сливочное мороженое</h1>
+        
+        <form method="get" action="https://echo.htmlacademy.ru" class="form-filter">
+        <fieldset class="filter-item f-sort">
+        <legend>Сортировка:</legend>
+             
+          <select name="sort" id="sort" class="menu-border-filter f-sort">
+              <option value="popular">по популярности</option>
+              <option value="price">по цене</option>
+            </select>
+        </fieldset>
+          
+        <fieldset class="filter-item f-price">
+        <legend>Цена:</legend>
+       <div class="range-controls menu-border-filter">
+          <div class="price-controls">
+            <label class="min-price label-price">от <input name="min-price" type="text" value="0"></label>
+            <label class="max-price label-price">до <input name="max-price" type="text" value="15000"></label>
+          </div>
+          <div class="scale">
+            <div class="bar" style="margin-left: 20%; width: 30%" ></div>
+          </div>
+         <span style="font-size: 0">Цена</span>
+         
+          <div class="toggle toggle-min"></div>
+          <div class="toggle toggle-max"></div>
+        </div>
+        </fieldset>
+          
+        <fieldset class="filter-item f-fat">
+          <legend>Жирность:</legend>
+          <div class="fat-conttols menu-border-filter">
+          <div class="fat-item">
+               <input type="radio" name="fat" id="fat1"> 
+          <label for="fat1">0%</label>
+          </div>
+           <div class="fat-item">
+          <input type="radio" name="fat" id="fat2" checked>
+          <label for="fat2">до 10%</label>
+             </div>
+              <div class="fat-item">
+          <input type="radio" name="fat" id="fat3">   
+          <label for="fat3">до 30%</label>
+                </div>
+                 <div class="fat-item">
+          <input type="radio" name="fat" id="fat4">
+          <label for="fat4">выше 30%</label>
+                   </div>
+         </div>
+        </fieldset>
+          
+        <fieldset class="filter-item f-content">
+          <legend>Наполнители:</legend>
+          <div class="content-controls menu-border-filter">
+          <div class="content-item">
+            <input type="checkbox" id="content1">  
+            <label for="content1">шоколадные</label>
+          </div>
+          <div class="content-item">
+            <input type="checkbox" id="content2">  
+            <label for="content2">сахарные присыпки</label>
+          </div>  
+          <div class="content-item">
+            <input type="checkbox" id="content3">  
+            <label for="content3">фрукты</label>
+          </div>  
+          <div class="content-item">
+            <input type="checkbox" id="content4">  
+            <label for="content4">сиропы</label>
+          </div>  
+          <div class="content-item">
+            <input type="checkbox" id="content5">  
+            <label for="content5">джемы</label>
+          </div>  
+          </div>
+        </fieldset>
+        <button type="submit" class="menu-border-filter f-button">Применить</button>
+        
+        </form>
+
+        
       </div>
       <div class="icecream-container">
       <section>

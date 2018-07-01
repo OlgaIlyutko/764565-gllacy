@@ -8,6 +8,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <input class="visually-hidden" type="radio" id="product1" name="toggle" value="icecream01" checked>
+    <input class="visually-hidden" type="radio" id="product2" name="toggle" value="icecream02">
+    <input class="visually-hidden" type="radio" id="product3" name="toggle" value="icecream03">
     <div class="block">
     <header class="main-header">
       <div class="big-container">
@@ -112,9 +115,46 @@
       </div>
       </div>
     </header>
+    <div class="big-container">
+      <section class="slider">
+        <ul>
+          <li class="slider-item" id="slide1">
+            <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item" id="slide2">
+            <h3>Шоколадный пломбир и лимонный сорбет</h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item" id="slide3">
+            <h3>Пломбир с помадкой и клубничный щербет</h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+        </ul>
+        <div class="slider-control">
+          <label for="product1">Первый продукт</label>
+          <label for="product2">Второй продукт</label>
+          <label for="product3">Третий продукт</label>
+        </div>  
+      </section>  
+    </div>
     <main>
       <div class="big-container">
       <h1 class="visually-hidden">Магазин мороженого "Глейси"</h1>
+      <section class="sale">
+        <div class="sale-flex">
+          <div class="raspberries sale-style">
+            <h2>Малинка даром!</h2>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="button" href="#">Хочу варенье!</a>
+          </div>
+          <div class="chocolate sale-style">
+             <h2>Шоколадки даром!</h2>
+             <p>При покупке 2 кг пломбира, добавим в ваш заказ ураковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>  
+             <a class="button" href="#">Хочу шоколадки!</a>
+          </div>
+        </div>  
+      </section>  
       <section class="description-shop">
         <h2>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
         <ul class="desc-list">
