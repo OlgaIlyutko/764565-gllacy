@@ -118,11 +118,17 @@
         <form method="get" action="https://echo.htmlacademy.ru" class="form-filter">
         <fieldset class="filter-item f-sort">
         <legend>Сортировка:</legend>
-             
-          <select name="sort" id="sort" class="menu-border-filter f-sort">
+          <div class="arrow-wraper">   
+          <select name="sort" id="sort" class="menu-border-filter sort-controls">
               <option value="popular">по популярности</option>
               <option value="price">по цене</option>
-            </select>
+          </select>
+          <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
+              <path fill="#FFF" d="M4.5 5L0 0h9z"/>
+            </svg>
+            </div>
+          </div>  
         </fieldset>
           
         <fieldset class="filter-item f-price">
@@ -133,7 +139,7 @@
             <label class="max-price label-price">до <input name="max-price" type="text" value="15000"></label>
           </div>
           <div class="scale">
-            <div class="bar" style="margin-left: 20%; width: 30%" ></div>
+            <div class="bar" style="margin-left: 0%; width: 70%" ></div>
           </div>
          <span style="font-size: 0">Цена</span>
          
@@ -144,49 +150,49 @@
           
         <fieldset class="filter-item f-fat">
           <legend>Жирность:</legend>
-          <div class="fat-conttols menu-border-filter">
-          <div class="fat-item">
-               <input type="radio" name="fat" id="fat1"> 
-          <label for="fat1">0%</label>
-          </div>
-           <div class="fat-item">
-          <input type="radio" name="fat" id="fat2" checked>
-          <label for="fat2">до 10%</label>
-             </div>
-              <div class="fat-item">
-          <input type="radio" name="fat" id="fat3">   
-          <label for="fat3">до 30%</label>
-                </div>
-                 <div class="fat-item">
-          <input type="radio" name="fat" id="fat4">
-          <label for="fat4">выше 30%</label>
-                   </div>
+          <div class="f-fat menu-border-filter">
+            <div class="fat-item">
+                 <input type="radio" name="fat" id="fat1"> 
+            <label for="fat1">0%</label>
+            </div>
+             <div class="fat-item">
+            <input type="radio" name="fat" id="fat2" checked>
+            <label for="fat2">до 10%</label>
+               </div>
+                <div class="fat-item">
+            <input type="radio" name="fat" id="fat3">   
+            <label for="fat3">до 30%</label>
+                  </div>
+                   <div class="fat-item">
+            <input type="radio" name="fat" id="fat4">
+            <label for="fat4">выше 30%</label>
+            </div>
          </div>
         </fieldset>
           
         <fieldset class="filter-item f-content">
           <legend>Наполнители:</legend>
           <div class="content-controls menu-border-filter">
-          <div class="content-item">
-            <input type="checkbox" id="content1">  
-            <label for="content1">шоколадные</label>
-          </div>
-          <div class="content-item">
-            <input type="checkbox" id="content2">  
-            <label for="content2">сахарные присыпки</label>
-          </div>  
-          <div class="content-item">
-            <input type="checkbox" id="content3">  
-            <label for="content3">фрукты</label>
-          </div>  
-          <div class="content-item">
-            <input type="checkbox" id="content4">  
-            <label for="content4">сиропы</label>
-          </div>  
-          <div class="content-item">
-            <input type="checkbox" id="content5">  
-            <label for="content5">джемы</label>
-          </div>  
+            <div class="content-item">
+              <input type="checkbox" id="content1">  
+              <label for="content1">шоколадные</label>
+            </div>
+            <div class="content-item">
+              <input type="checkbox" id="content2">  
+              <label for="content2">сахарные присыпки</label>
+            </div>  
+            <div class="content-item">
+              <input type="checkbox" id="content3">  
+              <label for="content3">фрукты</label>
+            </div>  
+            <div class="content-item">
+              <input type="checkbox" id="content4">  
+              <label for="content4">сиропы</label>
+            </div>  
+            <div class="content-item">
+              <input type="checkbox" id="content5">  
+              <label for="content5">джемы</label>
+            </div>  
           </div>
         </fieldset>
         <button type="submit" class="menu-border-filter f-button">Применить</button>

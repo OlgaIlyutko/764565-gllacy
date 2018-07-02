@@ -576,7 +576,7 @@ input[type="radio"].visually-hidden {
   padding-top: 9px;
  
   background-color: rgba(255,255,255, 0.3);
-  border-radius: 18px;
+  border-radius: 20px;
   height: 36px;
  
   
@@ -954,6 +954,8 @@ input[type="radio"].visually-hidden {
 .catalog-item:focus .catalog-item-hover {
   border-radius: 5px;
   background-color: rgba(255,255,255, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+  
 }
 
 .catalog-item:hover .img-button,
@@ -1152,6 +1154,11 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.slider-control label:hover {
+  background-color: rgba(255,255,255, 0.4);
+  
+}
+
 .slider-item h3 {
   width: 700px;
   margin: 0 auto;
@@ -1227,9 +1234,9 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item {
-  display: inline-block;
+ 
   border: none;
-  margin-right: 10px;
+ /* margin-right: 10px;*/
   padding: 0;
   font-family: "Roboto", Arial, sans-serif; 
   font-weight: 500;
@@ -1278,26 +1285,27 @@ input[type="radio"].visually-hidden {
   display: inline-block;
 }
 
-.filter-item div:not(:last-of-type) {
+.f-fat>div:not(:last-of-type),
+.content-controls>div:not(:last-of-type) {
   margin-right: 15px;
 }
 
 .scale {
-  height: 2px;
-
-  background: #d7dcde;
+  height: 3px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .bar {
    width: 70%;
-  height: 2px;
+  height: 3px;
 
-  background: #00ca74;
+  background:  rgba(255, 255, 255, 1);
 }
 
 .range-controls {
   position: relative;
-  top: 10px;
+  
   
   height: 36px;
   
@@ -1335,8 +1343,13 @@ input[type="radio"].visually-hidden {
 
 
 .form-filter {
-  width: 900px;
+  width: 850px;
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .content-item {
@@ -1348,11 +1361,27 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   width: 20px;
   height: 20px;
 }
+
+.content-item:hover label::before {
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+#content1:checked:hover ~ label[for="content1"]::after,   /*какая тут вложенность*/
+#content2:checked:hover ~ label[for="content2"]::after,
+#content3:checked:hover ~ label[for="content3"]::after,
+#content4:checked:hover ~ label[for="content4"]::after,
+#content5:checked:hover ~ label[for="content5"]::after {
+  border-bottom: 3px solid  rgba(255, 255, 255, 1);
+  border-right: 3px solid  rgba(255, 255, 255, 1);
+
+}
+
+
 
 .f-content label {
    position: relative;
@@ -1391,15 +1420,20 @@ input[type="radio"].visually-hidden {
   padding-left: 15px;
 }
 
-.form-filter .f-sort {
+.form-filter .sort-controls {
   font-family: "Roboto", Arial, sans-serif; 
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   padding-top: 0;
+  padding-right: 40px;
   
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+  
 
 
 
@@ -1468,6 +1502,55 @@ f-price {
   background-color: rgba(255, 255, 255, 0.6);
   border: none;
   color: #323232;
-  margin: -1px;
-  /*box-shadow: 0 -1px 0 1px rgba(255, 255, 255, 0.8)*/
+  
+  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.6);
+  padding: 0 27px;
+}
+
+
+
+
+
+.fat-item:hover {
+  color: #323232;
+}
+
+.content-item:hover {
+  color: #323232;
+}
+
+
+
+.sort-controls:hover {
+  color: #323232;
+}
+
+.sort-controls:hover+.arrow path {      /*наверно слишком большая вложенность*/
+  fill: #323232;
+}
+
+.fat-item:hover label:before {
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
+
+
+#fat1:checked:hover ~ label[for="fat1"]::after,   /*какая тут вложенность*/
+#fat2:checked:hover ~ label[for="fat2"]::after,
+#fat3:checked:hover ~ label[for="fat3"]::after,
+#fat4:checked:hover ~ label[for="fat4"]::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 9px;
+  height: 9px;
+    
+}
+
+.arrow-wraper {
+   position: relative;
 }
