@@ -37,7 +37,7 @@ img {
   background-image: url("../img/two-icecreams-01.png");
   background-repeat: no-repeat;
   background-position: top center;
-  /*transition: background-image 0.5s ease, background-color 0.5s ease;*/
+  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .inner .block{
@@ -103,7 +103,7 @@ a {
 
 
 
-.menu-border .forget-password:hover,         /*уменьшила вложенность, без menu-border почему-то не работает*/
+.menu-border .forget-password:hover,         
 .menu-border .forget-password:focus,
 .menu-border .new-user:hover,         
 .menu-border .new-user:focus,
@@ -279,10 +279,16 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
 }
 
+.catalog-item-hover a.button {
+  text-decoration: none;
+}
+
+
 .icecream {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
+  margin-top: 0;
 }
 
 .foto-icecream {
@@ -650,7 +656,7 @@ input[type="radio"].visually-hidden {
  margin: 0;
 }
 
-.main-menu-item>a:active {          /*кому состояние вешать? li или a*/
+.main-menu-item>a:active {                    
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: inset 0px 3px 3px 0px rgba(0 ,0 ,0 , 0.5);
   border-radius: 15px;
@@ -1056,14 +1062,14 @@ input[type="radio"].visually-hidden {
 
 .inner .basket {
   background-color: rgba(255, 255, 255, 0.9);
-  
+  position: relative;
 }
 
 .inner .basket-link {
   color: #000000;
 }
 
-.inner .basket path,        /*слишком большая вложенность*/
+.inner .basket path,            /*слишком большая вложенность*/
 .inner .basket circle {
   fill: #000000;
 }
@@ -1264,11 +1270,11 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   width: 22px;
   height: 22px;
-
 }
 
 
-#fat1:checked ~ label[for="fat1"]::after,   /*какая тут вложенность*/
+
+#fat1:checked ~ label[for="fat1"]::after,   
 #fat2:checked ~ label[for="fat2"]::after,
 #fat3:checked ~ label[for="fat3"]::after,
 #fat4:checked ~ label[for="fat4"]::after {
@@ -1279,8 +1285,27 @@ input[type="radio"].visually-hidden {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
 }
+
+
+#fat1:disabled ~ label[for="fat1"]::before,   
+#fat2:disabled ~ label[for="fat2"]::before,
+#fat3:disabled ~ label[for="fat3"]::before,
+#fat4:disabled ~ label[for="fat4"]::before {
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  
+}
+
+
+#fat1:disabled ~ label[for="fat1"]::after,   
+#fat2:disabled ~ label[for="fat2"]::after,
+#fat3:disabled ~ label[for="fat3"]::after,
+#fat4:disabled ~ label[for="fat4"]::after {
+  background-color: rgba(255, 255, 255, 0.4);
+
+}
+
 .fat-item {
   display: inline-block;
 }
@@ -1290,55 +1315,18 @@ input[type="radio"].visually-hidden {
   margin-right: 15px;
 }
 
-.scale {
-  height: 3px;
-  margin: 0;
-  background: rgba(255, 255, 255, 0.5);
-}
 
-.bar {
-   width: 70%;
-  height: 3px;
 
-  background:  rgba(255, 255, 255, 1);
-}
 
-.range-controls {
-  position: relative;
-  
-  
-  height: 36px;
-  
-  padding-top: 18px;
-  padding-right: 20px;
-  padding-left: 20px;
-  
- /* background-color: #f1f1f1;
-  
-  border-radius: 5px;*/
-}
 
-.toggle {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  
-  width: 4px;
-  height: 4px;
-  padding: 0;
 
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  border-radius: 50%;
-}
+ 
 
-.toggle-min {
-  left: 18px;
-}
 
-.toggle-max {
-  left: 118px;
-}
+
+
+
+
 
 
 
@@ -1361,26 +1349,35 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.7;
 }
 
 .content-item:hover label::before {
-  border: 2px solid rgba(255, 255, 255, 1);
+ opacity: 1;
 }
 
-#content1:checked:hover ~ label[for="content1"]::after,   /*какая тут вложенность*/
-#content2:checked:hover ~ label[for="content2"]::after,
-#content3:checked:hover ~ label[for="content3"]::after,
-#content4:checked:hover ~ label[for="content4"]::after,
-#content5:checked:hover ~ label[for="content5"]::after {
-  border-bottom: 3px solid  rgba(255, 255, 255, 1);
-  border-right: 3px solid  rgba(255, 255, 255, 1);
-
+#content1:checked:hover ~ label[for="content1"]::before,   
+#content2:checked:hover ~ label[for="content2"]::before,
+#content3:checked:hover ~ label[for="content3"]::before,
+#content4:checked:hover ~ label[for="content4"]::before,
+#content5:checked:hover ~ label[for="content5"]::before {
+  opacity: 1;
+ 
 }
 
+
+#content1:disabled ~ label[for="content1"]::before,   
+#content2:disabled ~ label[for="content2"]::before,
+#content3:disabled ~ label[for="content3"]::before,
+#content4:disabled ~ label[for="content4"]::before,
+#content5:disabled ~ label[for="content5"]::before {
+  opacity: 0.4;
+ 
+}
 
 
 .f-content label {
@@ -1394,23 +1391,16 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-#content1:checked ~ label[for="content1"]::after,   /*какая тут вложенность*/
-#content2:checked ~ label[for="content2"]::after,
-#content3:checked ~ label[for="content3"]::after,
-#content4:checked ~ label[for="content4"]::after,
-#content5:checked ~ label[for="content5"]::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: 8px;
-  width: 10px;
-  height: 17px;
+#content1:checked ~ label[for="content1"]::before,   
+#content2:checked ~ label[for="content2"]::before,
+#content3:checked ~ label[for="content3"]::before,
+#content4:checked ~ label[for="content4"]::before,
+#content5:checked ~ label[for="content5"]::before {
   
-  border-bottom: 3px solid  rgba(255, 255, 255, 0.8);
-  border-right: 3px solid  rgba(255, 255, 255, 0.8);
- 
-  transform: rotate(45deg);
+  background-image: url("../img/checkbox-on.svg");
 }
+
+
 
 .form-filter legend {
   font-weight: normal;
@@ -1434,43 +1424,95 @@ input[type="radio"].visually-hidden {
   appearance: none;
 }
   
-
-
-
-
-
-
-
-
-
-.price-controls {
-  position: absolute;
-  top: -32px;
-  left: 50px;
-  width: 200px;
+.arrow svg {
+    transform: scaleY(1.5);
 }
 
-.label-price {
-  display: inline-block;
- 
-}
-
-.price-controls input {
-  width: 40px;
-}
-
-f-price {
-  
-}
-
-.price-controls input {
-  border: none;
-  background: #849d8f;
-}
 
 .f-price {
   width: 200px;
 }
+
+.legend {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 6px;
+}
+
+
+.legend-controls {
+    display: inline-block;
+}
+
+.range-controls {
+  display: inline-block;
+}
+
+.label-price {
+    display: inline-block;
+    
+}
+
+.label-price input {
+    width: 30px;
+    background-color: #849d8f;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Roboto", Arial, sans-serif; 
+    color: #ffffff;
+}
+
+.scale-style {
+    padding-top: 16px;
+    position: relative;
+}
+
+.scale {
+  height: 3px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  
+}
+
+.bar {
+   width: 70%;
+  height: 3px;
+
+  background:  rgba(255, 255, 255, 1);
+}
+
+
+.toggle {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  border: 7px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+ 
+}
+
+
+
+.toggle-min {
+  left: 28px;
+}
+
+.toggle-max {
+  left: 128px;
+}
+
+
+
+
 
 .f-content {
   margin-top: 20px;
@@ -1553,4 +1595,197 @@ f-price {
 
 .arrow-wraper {
    position: relative;
+}
+
+.breadcrumbs {
+    text-align: right;
+    margin: 40px 20px 40px 0;
+   
+}
+
+.breadcrumbs .active {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #323232;
+}
+
+.breadcrumbs a {
+    padding: 5px 10px;
+    position: relative;
+    
+}
+
+.breadcrumbs a:first-of-type::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -20px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+    transform: rotate(45deg);
+}
+
+.breadcrumbs a:first-of-type[class="active"]::before,
+.breadcrumbs a:last-of-type[class="active"]::after {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumbs a:last-of-type::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -23px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+    transform: rotate(-135deg);
+}
+
+.breadcrumbs-navigation a {
+    position: relative;
+    
+}
+
+.breadcrumbs-navigation a[href] {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);  
+    
+}
+
+
+
+.breadcrumbs-navigation a:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.breadcrumbs-navigation a:not(:last-of-type)::after {
+    content: "»";
+    position: absolute;
+    right: -13px;
+}
+
+
+
+.breadcrumbs-navigation {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  top: -20px;
+}
+.popular {
+  position: absolute;
+  width: 61px;
+  height: 62px;
+  left: 10px;
+  background-image: url("../img/hit.svg");
+}
+
+.basket-popup {
+  width: 540px;
+  height: 245px;
+  position: absolute;
+
+  top: 35px;
+  right: 0px;
+  display: block;
+  padding: 10px;
+}
+
+.inner .basket:hover .basket-popup {
+  display: block;
+}
+
+.basket-popup table {
+    text-align: center;
+    color: #323232;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+  
+}
+
+.basket-popup table::after {
+  content: "";
+  position: absolute;
+  display: block;
+  
+  
+  width: 520px;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+.table-desc {
+  width: 250px;
+  text-align: left;
+  padding: 0 13px;
+}
+
+.table-cost {
+  width: 110px;
+}
+
+.table-price {
+  width: 90px;
+}
+
+.table-tr {
+  height: 50px;
+}
+
+.table-cost span {
+ color: #999999; 
+}
+
+
+
+.table-img img {
+  border-radius: 50%;
+}
+
+
+
+.table-del {
+  width: 27px;
+  position: relative;
+}
+
+.table-del::before,
+.table-del::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background-color: #323232;
+  top: 23px;
+  left: 5px;
+  
+}
+
+.table-del::before {
+transform: rotate(45deg);
+}
+
+.table-del::after {
+transform: rotate(-45deg);
+}
+
+.final-price {
+  text-align: right;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #323232;
+  margin: 20px 0;
+}
+
+.basket-popup .button {
+  padding: 14px 20px;
+  float: right;
 }
