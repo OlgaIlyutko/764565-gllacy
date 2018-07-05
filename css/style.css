@@ -475,15 +475,15 @@ input[type="radio"].visually-hidden {
 
 
 
-.feedback-popup {
- /* display: none;*/
+section.feedback-popup {
+ 
   position: fixed;
   top: 200px;
   left: 50%;
   width: 480px;
   padding: 22px;
   margin-left: -240px;
-  
+  z-index: 4;
 
 }
 
@@ -678,6 +678,7 @@ input[type="radio"].visually-hidden {
   top: 28px;
   left: -8px;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .main-menu-item:hover .in-main-menu,
@@ -941,6 +942,8 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255,255,255, 0.5);
 }
 
+/*.
+
 .catalog-item-hover:hover,
 .catalog-item-hover:focus 
 {
@@ -954,13 +957,23 @@ input[type="radio"].visually-hidden {
   padding-left: 4px;
   padding-right: 4px;
   width: 100%;
-}
+}*/
 
 .catalog-item:hover .catalog-item-hover,
 .catalog-item:focus .catalog-item-hover {
   border-radius: 5px;
   background-color: rgba(255,255,255, 0.2);
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+   position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column; 
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 100%;
   
 }
 
@@ -1069,12 +1082,12 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.inner .basket path,            /*слишком большая вложенность*/
-.inner .basket circle {
+.full.basket path,            /*слишком большая вложенность*/
+.full.basket circle {
   fill: #000000;
 }
 
-.inner .basket polygon {
+.full.basket polygon {
   fill: red;
 }
 
@@ -1674,7 +1687,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   position: relative;
-  top: -20px;
+  margin-top: -20px;
 }
 .popular {
   position: absolute;
@@ -1788,4 +1801,15 @@ transform: rotate(-45deg);
 .basket-popup .button {
   padding: 14px 20px;
   float: right;
+}
+
+.modal-overlay {
+  display: none;      /*наверно это временно доя появления скриптов*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
 }
