@@ -21,8 +21,8 @@
               <img src="img/logo.png" alt="Логотип" class="logo-img">
             </a>
             <ul class="main-menu">
-              <li class="main-menu-item" style="position:relative;">
-                <div class="pseudo-area"></div>
+              <li class="main-menu-item pseudo-area" style="position:relative;">
+                
                 <a href="#">Каталог
                   
                 <ul class="in-main-menu">
@@ -39,7 +39,7 @@
           </ul>
           </div>
           <div class="user-navigation-container">
-            <div class="search">
+            <div class="search pseudo-area">
               <a href="#" class="search-link">
                 <span class="visually-hidden">Поиск</span>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
@@ -51,14 +51,14 @@
                   </g>
                 </svg>
               </a>
-              <div class="pseudo-area"></div>
+              
               <section class="search-popup popup-style">
                 <h2 class="visually-hidden">Поиск</h2>
                   <input type="search" name="search" id="search-form" placeholder="Что ищем?">
               </section>
             </div>
             <ul class="user-navigation menu-border">
-              <li class="login">
+              <li class="login pseudo-area">
                 <a href="#" class="login-link">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	             width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
@@ -69,7 +69,7 @@
                   </svg>
                  Вход</a>
               </li>
-              <div class="pseudo-area"></div>
+              
               <section class="login-popup popup-style">
                     <h2 class="visually-hidden">Авторизация</h2>
                     <form action="https://echo.htmlacademy.ru" method="post">
@@ -219,18 +219,32 @@
       <div class="blog-subscription-container">
         <article class="blog">
           <span class="blog-new">Новое в нашем блоге</span>
-          <h2 class="article-name"><a href="#">10 способов сервировка фруктовых щербетов к столу</a></h2>
+          <h2 class="article-name"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h2>
         </article>
         <section class="subscription">
           <h2 class="visually-hidden">Подписка</h2>
           <p  class="desc-subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <input type="text">
-          <input type="submit" value="Отправить" class="button-send">
+          <input type="text" class="subscription-mail" placeholder="Электронная почта">
+          <button type="submit" class="button-send button">Отправить</button>
         </section>
       </div>
       </div>
       <div class="map">
         <img src="img/map.jpg" alt="Карта проезда">
+        <div class="address">
+          <h2 class="visually-hidden">Адрес</h2>
+            <div class="place">
+              <p style="width: 150px">Адрес главного офиса и офлайн-магазина: </p>
+              <p><span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+            </div>  
+            <div class="number">
+              <p>Для заказов по телефону: </p>
+              <p><span>8 812 450-25-25</span></p>
+              <p>(с 10 до 20 ежедневно)</p>
+             
+            </div>
+            <a class="button address-button">Форма обратной связи</a>
+        </div>
       </div>
     </main>
     <footer class="main-footer">
@@ -272,7 +286,7 @@
         <p>
           <textarea name="fb-text" placeholder="Напишите что-нибудь..." ></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button send-info" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
