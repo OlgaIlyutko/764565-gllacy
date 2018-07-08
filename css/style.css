@@ -436,7 +436,7 @@ input[type="radio"].visually-hidden {
 .map {
   margin-bottom: 18px;
   text-align: center;
-  position: relative;
+  
 }
 
 
@@ -1520,10 +1520,10 @@ section.feedback-popup {
 }
 
 .bar {
-   width: 70%;
   height: 4px;
-
-  background: rgb(248, 247, 244);
+  margin-left: 10%; 
+  width: 60%;
+  background-color: rgb(248, 247, 244);
 }
 
 
@@ -1942,4 +1942,22 @@ transform: rotate(-45deg);
   font-size: 18px;
   line-height: 24px;
   padding: 7px 20px;
+}
+
+.map-container {
+  width: 1200px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+.catalog-position {
+  position:relative;
+}
+
+.new-position {
+  position:relative;
+}
+
+.place-style {
+  width: 150px;
 }
