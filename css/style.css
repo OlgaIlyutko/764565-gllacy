@@ -131,11 +131,13 @@ a {
   align-items: center;
   max-width: 600px;
   flex-wrap: wrap;
-
-  
-
-  
 }
+  .site-navigation {
+   height: 73px; 
+    
+  }
+
+  
 
 .search,
 .login,
@@ -150,13 +152,14 @@ a {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  padding-bottom: 14px;
+  padding-bottom: 5px;
 }
 
 .contact-number {
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
+  
 }
 
 .description-shop {
@@ -164,9 +167,9 @@ a {
   background-image: url("../img/wafer2.jpg");
   background-position: 0 0;
   background-repeat: repeat;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 40px;
-  padding: 28px 20px;    
+  padding: 25px 20px 23px 20px;    
 
 }
 
@@ -221,7 +224,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   border-radius: 15px;
   margin-right: 26px;
-  padding: 25px 20px;
+  padding: 24px 20px;
   
 }
 
@@ -234,16 +237,13 @@ input[type="radio"].visually-hidden {
   border-bottom: 2px solid rgba(50, 50, 50, 0.3);
 }
 
-.article-name h2 {
-  margin: 0;
-  
-}
+
 
 
 .menu-footer {
   font-size: 13px;
   line-height: 18px;
-  padding-top: 18px;
+  padding-top: 15px;
   
   display: flex;
   justify-content: space-between;
@@ -251,7 +251,7 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-img {
-  width: 165px;
+  width: 154px;
 }
 
 .suppliers {
@@ -269,6 +269,11 @@ input[type="radio"].visually-hidden {
 .copyright a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.copyright img {
+  padding-left: 2px;
+  
+} 
 
 .feedback {
   font-size: 24px;
@@ -351,15 +356,15 @@ input[type="radio"].visually-hidden {
 }
 
 .logo {
-  padding-right: 13px;
+  padding-right: 7px;
 }
 
 .user-navigation-container {
   display: flex;
   
   justify-content: flex-end;
-  padding-top: 30px; 
-  padding-top: 30px; 
+  
+  padding-top: 22px; 
   padding-bottom: 27px; 
   flex-wrap: wrap;
     }
@@ -367,14 +372,14 @@ input[type="radio"].visually-hidden {
 .main-menu-item>a {
   
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 0 17px;  
+  margin: 0 15px;  
 
 }
 
 .contact-info {
   text-align: right;
   vertical-align: top;
-  margin-left: 900px;
+  float: right;
   
 }
 
@@ -382,6 +387,7 @@ input[type="radio"].visually-hidden {
 
 .contact-info p {
    margin: 0;
+  
 }
 
 .blog-subscription-container {
@@ -393,12 +399,12 @@ input[type="radio"].visually-hidden {
 }
 
 .subscription {
-  width: 565px;
+  width: 560px;
   background-image: url("../img/subscription.png");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
-  padding: 20px 27px;  
+  padding: 20px 25px 20px 27px;  
 }
 
 
@@ -407,15 +413,15 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 535px;
   vertical-align: top;
-  margin-top: 15px;
+  margin-top: 9px;
  
-  padding-left: 58px;
+  padding-left: 57px;
   padding-top: 13px;
   
 }
 
 .desc-list li:nth-of-type(2n+1){
- margin-right: 26px;
+ margin-right: 27px;
 }
 
 .desc-item-icecream {
@@ -440,11 +446,13 @@ input[type="radio"].visually-hidden {
 }
 
 .article-name {
-  width: 280px;
+  width: 290px;
+  padding-top: 4px;
+  margin: 0;
 }
 
 .map {
-  margin-bottom: 18px;
+  margin-bottom: 11px;
   text-align: center;
   
 }
@@ -467,7 +475,7 @@ input[type="radio"].visually-hidden {
 
 
 .social li:not(:last-of-type) {
-  padding-right: 12px;
+  padding-right: 14px;
 }
 
 
@@ -518,7 +526,7 @@ section.feedback-popup {
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   
 }
 
@@ -562,7 +570,7 @@ section.feedback-popup {
   height: 13px;
   position: absolute;
   top: 3px;
-  left: 0;
+  left: -15px;
 }
 
 .menu-footer li {
@@ -580,13 +588,13 @@ section.feedback-popup {
  
   
   padding-left: 42px;
-  padding-right: 15px;
-  padding-top: 8px;
+  padding-right: 17px;
+  padding-top: 9px;
  
   background-color: rgba(255,255,255, 0.2);
   border-radius: 15px;
   height: 32px;
-  margin-left: 18px;
+  margin-left: 12px;
   
 }
 
@@ -615,11 +623,14 @@ section.feedback-popup {
 
 .menu-footer1 li {
   position: relative;
-  padding-left: 21px;
+  padding-left: 6px;
 }
 
 
-
+.menu-footer li:first-of-type {
+  padding-bottom: 4px;
+  
+}
 
 
 
@@ -938,7 +949,8 @@ textarea {
 }
 
 .main-menu>li {
-  margin-right: 3px;
+  
+  margin-bottom: 14px;
   
 }
 
@@ -1144,7 +1156,7 @@ textarea {
 .slider {
   position: relative;
   
-  padding-top: 321px;
+  padding-top: 319px;
   margin-bottom: 40px;
   text-align: center;
   color: #ffffff;
@@ -1182,7 +1194,7 @@ textarea {
 
 .slider-control {
   position: absolute;
-  bottom: 20px;
+  bottom: 21px;
   left: 0;
   z-index: 20;
   
@@ -1193,8 +1205,8 @@ textarea {
 
 .slider-control label {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
 
   vertical-align: top;
@@ -1213,7 +1225,7 @@ textarea {
 .slider-item h3 {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   
   font-size: 60px;
   line-height: 60px;
@@ -1244,7 +1256,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   
   
 }
@@ -1258,7 +1270,7 @@ textarea {
 }
 
 .sale-style {
-  padding: 20px;
+  padding: 17px 20px 17px 19px;
 }
 
 .sale h2 {
@@ -1274,14 +1286,14 @@ textarea {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  min-height: 80px;
+  min-height: 86px;
 }
 
 .sale a {
   float: right;
   font-size: 18px;
   line-height: 24px;
-  padding: 10px 23px;
+  padding: 12px 22px;
 }
 
 .filter {
@@ -1913,7 +1925,7 @@ transform: rotate(-45deg);
 
 
 .button-send {
-  padding: 11px 17px;
+  padding: 11px 14px;
   font-size: 18px;
   line-height: 24px;
   
@@ -1926,21 +1938,21 @@ transform: rotate(-45deg);
 
 
 .subscription input {
-  width: 370px;
-  margin-right: 3px;
+  width: 368px;
+  margin-right: 11px;
 }
 
 .address {
   position: absolute;
   top: 60px;
-  right: 100px;
-  width: 300px;
+  right: 27px;
+  width: 302px;
   
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.98);
   font-size: 14px;
   line-height: 20px;
-  padding: 25px;
+  padding: 25px 25px 32px 25px;
   color: #323232;
   text-align: left;
 }
@@ -1962,14 +1974,15 @@ transform: rotate(-45deg);
 }
 
 .address .place {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  margin-top: 6px;
   
 }
 
 .address-button {
   font-size: 18px;
   line-height: 24px;
-  padding: 10px 26px;
+  padding: 10px 27px;
 }
 
 .map-container {
@@ -1994,4 +2007,13 @@ transform: rotate(-45deg);
 
 .sort-controls option {
   padding: 3px 2px 5px;           /*почему-то не работает*/
+}
+
+.desc-subscription {
+  margin: 0;
+  padding: 14px 0 34px 0;
+}
+
+.number-map {
+  padding-top: 1px;
 }
