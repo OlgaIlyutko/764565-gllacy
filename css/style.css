@@ -280,7 +280,7 @@ input[type="radio"].visually-hidden {
   line-height: 28px;
   font-weight: 500;
   color: #323232;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .catalog-item-name {
@@ -304,7 +304,8 @@ input[type="radio"].visually-hidden {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 4px;
+  margin-bottom: 26px;
 }
 
 .foto-icecream {
@@ -498,17 +499,17 @@ input[type="radio"].visually-hidden {
 
 section.feedback-popup {
  
-  position: fixed;
-  top: 200px;
-  left: 50%;
-  width: 480px;
-  padding: 22px;
-  margin-left: -240px;
-  z-index: 4;
-  box-shadow: none;
-
+ position: fixed;
+ top: 337px;
+ left: 50%;
+ width: 478px;
+ padding: 16px 25px 25px 25px;
+ margin-left: -240px;
+ z-index: 4;
+ box-shadow: none;
+ border-radius: 10px;
+  
 }
-
 
 
 
@@ -600,9 +601,9 @@ section.feedback-popup {
 
 .menu-border-filter {
  
-  padding-left: 15px;
+  padding-left: 19px;
  
-  padding-right: 15px;
+  padding-right: 19px;
   padding-top: 9px;
  
   background-color: rgba(255,255,255, 0.2);
@@ -703,7 +704,7 @@ section.feedback-popup {
   position: absolute;
   display: none;
   top: 28px;
-  left: -8px;
+  left: -3px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   z-index: 1;
   font-size: 14px;
@@ -718,12 +719,12 @@ section.feedback-popup {
 }
 
 .in-main-menu-item {
-  padding: 9px 20px;
+  padding: 8px 20px;
   white-space: nowrap;
 }
 
 .in-main-menu li:first-of-type {
-  padding-bottom: 11px;
+  padding: 13px 20px;
   position: relative;
   
 }
@@ -732,8 +733,8 @@ section.feedback-popup {
   content: "";
   position: absolute;
   display: block;
-  top: 35px;
-  left: 6px;
+  top: 40px;
+  left: 4px;
   width: 130px;
   height: 1px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -815,7 +816,7 @@ section.feedback-popup {
 }
 
 .login-input {    
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   
 }
 
@@ -823,7 +824,7 @@ section.feedback-popup {
 
 .login-a {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: top;
   padding-bottom: 4px;
  }
 
@@ -832,7 +833,7 @@ section.feedback-popup {
 .login-popup {
   width: 277px;
   position: absolute;
-  padding: 20px 15px;
+  padding: 21px 18px 15px 18px;
   top: 35px;
   right: 0px;
 }
@@ -975,7 +976,7 @@ textarea {
   content: "";
   position: absolute;
   display: block;
-  top: -20px;
+  top: -18px;
   left: 0;
   width: 1150px;
   height: 1px;
@@ -1056,13 +1057,13 @@ textarea {
 }
 
 .feedback-popup p{
-  padding-bottom: 20px;
+  padding-bottom: 19px;
 }
 
 .modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 13px;
+  right: 19px;
   width: 22px;
   height: 22px;
   background-color: rgba(0,0,0, 0);
@@ -1076,7 +1077,7 @@ textarea {
 .modal-close::after {
   content: "";
   position: absolute;
-  width: 19px;
+  width: 20px;
   height: 2px;
   background-color: #323232;
   top: 10px;
@@ -1092,13 +1093,14 @@ textarea {
 }
 
 .feedback-popup input {
-  width: 270px;
+  width: 267px;
   border: 1px solid #b2b2b2;
 }
 
 .feedback-popup textarea {
   height: 155px;
   border: 1px solid #b2b2b2;
+  padding: 8px 13px;
  }
 
 .login-button button {
@@ -1106,14 +1108,14 @@ textarea {
   font-size: 18px;
   line-height: 24px;
   padding: 10px 23px;
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .feedback-popup .send-info {
   float: right;
   font-size: 18px;
   line-height: 24px;
-  padding: 11px 22px;
+  padding: 11px 20px;
   /*font-weight: bold;*/
 }
 
@@ -1322,6 +1324,13 @@ textarea {
 }
 
 
+.f-fat {
+ 
+ 
+  padding-left: 17px;
+
+}
+
 .f-fat label::before {
   content: "";
   position: absolute;
@@ -1373,12 +1382,14 @@ textarea {
 
 .f-fat>div:not(:last-of-type),
 .content-controls>div:not(:last-of-type) {
-  margin-right: 15px;
+  margin-right: 16px;
 }
 
 
 
-
+.content-controls {
+  padding-left: 15px;
+}
 
 
  
@@ -1392,8 +1403,8 @@ textarea {
 
 
 .form-filter {
-  width: 850px;
-  margin-bottom: 40px;
+  width: 860px;
+  margin-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
   
@@ -1410,10 +1421,11 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  width: 27px;
+  width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
+  background-size: 91%;
   opacity: 0.8;
 }
 
@@ -1443,7 +1455,7 @@ textarea {
 
 .f-content label {
    position: relative;
-   padding-left: 30px;
+   padding-left: 32px;
    
 }
 
@@ -1468,7 +1480,7 @@ textarea {
   font-size: 14px;
   line-height: 16px;
   padding-bottom: 6px;
-  padding-left: 15px;
+  padding-left: 14px;
 }
 
 .form-filter .sort-controls {
@@ -1478,9 +1490,9 @@ textarea {
   line-height: 18px;
   color: #ffffff;
   padding-top: 0;
-  padding-right: 40px;
+  padding-right: 32px;
   border: none;
-  
+  padding-left: 14px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1492,7 +1504,7 @@ textarea {
 
 
 .f-price {
-  width: 200px;
+  width: 210px;
 }
 
 .legend {
@@ -1500,6 +1512,7 @@ textarea {
     font-size: 14px;
     line-height: 16px;
     padding-bottom: 6px;
+    padding-left: 15px;
 }
 
 
@@ -1543,8 +1556,8 @@ textarea {
 
 .bar {
   height: 4px;
-  margin-left: 10%; 
-  width: 60%;
+  margin-left: 18%; 
+  width: 52%;
   background-color: rgb(248, 247, 244);
 }
 
@@ -1568,19 +1581,19 @@ textarea {
 
 
 .toggle-min {
-  left: 28px;
+  left: 38px;
 }
 
 .toggle-min:hover {
-  left: 27px;
+  left: 37px;
 }
 
 .toggle-max {
-  left: 128px;
+  left: 135px;
 }
 
 .toggle-max:hover {
-  left: 127px;
+  left: 134px;
 }
 
 
@@ -1588,13 +1601,13 @@ textarea {
 
 
 .f-content {
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 
 
 .f-button {
-  padding: 0 25px;
+  padding: 0 27px;
   
   border: 2px solid rgba(255, 255, 255, 1);
   
@@ -1659,7 +1672,7 @@ textarea {
 
 .arrow {
   position: absolute;
-  top: 8px;
+  top: 6px;
   right: 15px;
   width: 9px;
   height: 9px;
@@ -1672,7 +1685,7 @@ textarea {
 
 .breadcrumbs {
     text-align: right;
-    margin: 40px 20px 40px 0;
+    margin: 34px 20px 51px 0;
    
 }
 
@@ -1683,7 +1696,7 @@ textarea {
 }
 
 .breadcrumbs a {
-  padding: 5px 10px;
+  padding: 3px 9px;
   position: relative;
   font-size: 16px;
   line-height: 18px;
@@ -1697,10 +1710,10 @@ textarea {
     position: absolute;
     top: 9px;
     left: -20px;
-    width: 12px;
-    height: 12px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255);
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
     transform: rotate(45deg);
 }
 
@@ -1713,12 +1726,12 @@ textarea {
 .breadcrumbs a:last-of-type::after {
     content: "";
     position: absolute;
-    top: 9px;
-    right: -23px;
-    width: 12px;
-    height: 12px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255);
+    top: 11px;
+    right: -19px;
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
     transform: rotate(-135deg);
 }
 
@@ -1751,7 +1764,7 @@ textarea {
   font-size: 14px;
   line-height: 16px;
   position: relative;
-  margin-top: -20px;
+  margin-top: 26px;
   max-width: 900px;
 }
 .popular {
@@ -1760,17 +1773,18 @@ textarea {
   height: 62px;
   left: 10px;
   background-image: url("../img/hit.svg");
+  z-index: 3;
 }
 
 .basket-popup {
   width: 540px;
-  height: 245px;
+  height: 242px;
   position: absolute;
 
   top: 35px;
   right: 0px;
  /* display: none;*/
-  padding: 10px;
+  padding: 13px 12px;
 }
 
 .inner .basket:hover .basket-popup {
@@ -1792,17 +1806,19 @@ textarea {
   display: block;
   
   
-  width: 520px;
+  width: 510px;
   height: 1px;
+  top: 130px;
   border-bottom: 1px solid #cacac7;
 }
 
 
 
 .table-desc {
-  width: 250px;
+  width: 247px;
   text-align: left;
-  padding: 0 13px;
+  padding: 0 10px;
+  
 }
 
 .table-cost {
@@ -1842,7 +1858,7 @@ textarea {
   height: 1px;
   background-color: #323232;
   top: 23px;
-  left: 5px;
+  left: 1px;
   
 }
 
@@ -1860,11 +1876,11 @@ transform: rotate(-45deg);
   line-height: 18px;
   font-weight: bold;
   color: #323232;
-  margin: 20px 0;
+  margin: 28px 0 15px 0;
 }
 
 .basket-popup .button {
-  padding: 10px 11px;
+  padding: 10px 13px;
   float: right;
   font-size: 18px;
   line-height: 24px;
@@ -2017,3 +2033,9 @@ transform: rotate(-45deg);
 .number-map {
   padding-top: 1px;
 }
+
+.item2 .table-desc {
+  vertical-align: bottom;
+}
+
+
