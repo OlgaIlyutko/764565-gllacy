@@ -42,6 +42,7 @@ img {
 
 .inner .block{
   background-image: none;
+ /* background: #849d8f;*/
   
 }
 
@@ -66,6 +67,12 @@ img {
   padding-left: 27px;
   padding-right: 27px;
   
+  
+}
+
+
+.inner .big-container {
+  background:  linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%);
 }
 
 .main-menu,
@@ -295,6 +302,7 @@ input[type="radio"].visually-hidden {
  /*border-bottom: 1px solid rgba(255, 255, 255, 0.5);   */
   order: 2;
   text-decoration: underline;
+  z-index: 3;
 }
 
 .catalog-item-hover a.button {
@@ -1044,12 +1052,7 @@ textarea {
   position: relative;
 }
 
-.icecream-container {
-  width: 1200px; 
-  margin: 0 auto;
-  padding-left: 27px;
-  padding-right: 27px;
-}
+
 
 .feedback-popup h2,
 .feedback-popup p {
@@ -1417,11 +1420,11 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  width: 23px;
-  height: 23px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-size: 91%;
+  background-size: 90%;
   opacity: 0.8;
 }
 
@@ -1467,6 +1470,7 @@ textarea {
 #content5:checked ~ label[for="content5"]::before {
   
   background-image: url("../img/checkbox-on.svg");
+  background-size: 100%;
 }
 
 
@@ -1529,7 +1533,7 @@ textarea {
 
 .label-price input {
     width: 30px;
-    background-color: #849d8f;
+    background-color: inherit;
     border: none;
     font-weight: normal;
     font-size: 14px;
@@ -1701,10 +1705,15 @@ textarea {
     
 }
 
+.breadcrumbs a:first-of-type,
+.breadcrumbs a:last-of-type {
+  padding: 0;
+}
+
 .breadcrumbs a:first-of-type::before {
     content: "";
     position: absolute;
-    top: 9px;
+    top: 6px;
     left: -20px;
     width: 9px;
     height: 9px;
@@ -1713,16 +1722,16 @@ textarea {
     transform: rotate(45deg);
 }
 
-.breadcrumbs a:first-of-type[class="active"]::before,
-.breadcrumbs a:last-of-type[class="active"]::after {
+/*.breadcrumbs a:nth-of-type(2)[class="active"] a:first-of-type::before,
+.breadcrumbs a:nth-of-type(n-1)[class="active"] a:last-of-type::after {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     border-left: 2px solid rgba(255, 255, 255, 0.2);
-}
+}*/
 
 .breadcrumbs a:last-of-type::after {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 6px;
     right: -19px;
     width: 9px;
     height: 9px;
@@ -1778,7 +1787,7 @@ textarea {
   position: absolute;
 
   top: 35px;
-  right: 0px;
+  right: 0;
  /* display: none;*/
   padding: 13px 12px;
 }
@@ -1816,6 +1825,18 @@ textarea {
   padding: 0 10px;
   
 }
+
+.table-desc a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.table-desc a:hover,
+.table-desc a:focus, 
+.table-desc a:active {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
 
 .table-cost {
   width: 110px;
@@ -1881,6 +1902,11 @@ transform: rotate(-45deg);
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+  
+}
+
+.button-basket {
+color: rgb(255, 255, 255);
 }
 
 .modal-overlay {
@@ -1894,9 +1920,9 @@ transform: rotate(-45deg);
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog-item a:hover,
-.catalog-item a:focus,
-.catalog-item a:active {
+a.catalog-item-name:hover,
+a.catalog-item-name:focus,
+a.catalog-item-name:active {
   color: #ffbc9e;
 }
 
@@ -1921,8 +1947,8 @@ transform: rotate(-45deg);
 }
 
 
-.breadcrumbs a:hover,
-.breadcrumbs a:focus {
+.breadcrumbs a:not([class="active"]):hover,
+.breadcrumbs a:not([class="active"]):focus {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
    
