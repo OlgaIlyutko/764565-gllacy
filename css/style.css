@@ -988,11 +988,11 @@ textarea {
   content: "";
   position: absolute;
   display: block;
-  top: -18px;
+  top: -16px;
   left: 0;
   width: 1150px;
   height: 1px;
-  border-bottom: 1px solid rgba(255,255,255, 0.3);
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
 }
 
 
@@ -1685,7 +1685,7 @@ textarea {
 
 .breadcrumbs {
     text-align: right;
-    margin: 52px 19px 51px 0;
+    margin: 52px 0 49px 0;
    
 }
 
@@ -1707,16 +1707,18 @@ textarea {
 
 .breadcrumbs a:first-of-type,
 .breadcrumbs a:last-of-type {
-  width: 9px;
-  height: 9px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
   padding: 0;
+  vertical-align: top;
 }
 
 .breadcrumbs a:first-of-type::before {
     content: "";
     position: absolute;
     top: 6px;
-    left: -22px;
+    left: 5px;
     width: 9px;
     height: 9px;
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -1734,7 +1736,7 @@ textarea {
     content: "";
     position: absolute;
     top: 6px;
-    right: -18px;
+    right: 5px;
     width: 9px;
     height: 9px;
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -1828,16 +1830,13 @@ textarea {
   
 }
 
-.table-desc a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
+
 
 .table-desc a:hover,
 .table-desc a:focus, 
 .table-desc a:active {
   color: #e84d37;
-  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
-}
+ }
 
 
 .table-cost {
@@ -1953,6 +1952,17 @@ a.catalog-item-name:active {
 .breadcrumbs a:not([class="active"]):focus {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
+   
+}
+
+
+
+.breadcrumbs a:first-of-type:hover,
+.breadcrumbs a:last-of-type:hover,
+.breadcrumbs a:first-of-type:focus,
+.breadcrumbs a:last-of-type:focus {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
    
 }
 
