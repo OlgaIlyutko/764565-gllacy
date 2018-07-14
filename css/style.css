@@ -1324,12 +1324,7 @@ textarea {
 }
 
 
-.f-fat {
- 
- 
-  padding-left: 17px;
 
-}
 
 .f-fat label::before {
   content: "";
@@ -1504,7 +1499,7 @@ textarea {
 
 
 .f-price {
-  width: 210px;
+  width: 220px;
 }
 
 .legend {
