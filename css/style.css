@@ -539,7 +539,7 @@ section.feedback-popup {
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   
 }
 
@@ -988,7 +988,7 @@ textarea {
   content: "";
   position: absolute;
   display: block;
-  top: -16px;
+  top: -20px;
   left: 0;
   width: 1150px;
   height: 1px;
@@ -1403,7 +1403,7 @@ textarea {
 
 .form-filter {
   width: 860px;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
   display: flex;
   flex-wrap: wrap;
   
@@ -1424,7 +1424,7 @@ textarea {
   height: 24px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 87%;
   opacity: 0.8;
 }
 
