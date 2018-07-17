@@ -247,7 +247,8 @@ input[type="radio"].visually-hidden {
   }
 
 .blog {
-  width: 560px;    
+  width: 560px;  
+  min-height: 221px;
   font-weight: 500;
   background-image: url("../img/strawberry-background2.jpg");  
   background-position: -51px -224px;    
@@ -320,6 +321,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-name {
+  max-width: 258px;
   font-size: 16px;
   line-height: 22px;
   
@@ -461,6 +463,7 @@ input[type="radio"].visually-hidden {
 
 .subscription {
   width: 560px;
+  min-height: 221px;
   background-image: url("../img/subscription.png");
  
   background-repeat: no-repeat;
@@ -539,6 +542,7 @@ input[type="radio"].visually-hidden {
   padding-top: 18px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-width: 200px;
 }
 
 
@@ -730,14 +734,14 @@ section.feedback-popup {
 .menu-border:hover path,
 .menu-border:focus path,
 .menu-border:hover polygon,
-.menu-border:focus polugon,
+.menu-border:focus polygon,
 .menu-border:hover circle,
 .menu-border:focus circle {
   fill: #000000;
  }
 
  .basket:hover polygon,
- .basket:focus polugon {
+ .basket:focus polygon {
   fill: none;
 }
 
@@ -875,7 +879,7 @@ section.feedback-popup {
   
 }
 
-.user-navigation:hover login-popup{
+.user-navigation a:hover+.login-popup {
   position: absolute;
   display: block;
 }
@@ -890,9 +894,7 @@ section.feedback-popup {
           justify-content: space-between;
 }
 
-.user-navigation:hover .login-popup {
-    display: block;
- }
+
 
 .login-link {
   position: relative;
@@ -1157,12 +1159,16 @@ textarea {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  margin: 0;
+  margin: 0 auto;
   position: absolute;
   top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 5;
   text-align: center;
   border-radius: 20px;
+  min-width: 205px;
+  
 }
 
 .catalog-item-hover {
@@ -1576,7 +1582,7 @@ textarea {
   height: 24px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-size: 87%;
+  background-size: 85%;
   opacity: 0.8;
 }
 
@@ -1633,6 +1639,7 @@ textarea {
   line-height: 16px;
   padding-bottom: 6px;
   padding-left: 14px;
+  color: #ffffff;
 }
 
 .form-filter .sort-controls {
@@ -1649,7 +1656,11 @@ textarea {
   -moz-appearance: none;
   appearance: none;
 }
-  
+
+.sort-controls::-ms-expand {
+  display: none;
+}
+
 .arrow svg {
     -webkit-transform: scaleY(1.5);
         -ms-transform: scaleY(1.5);
@@ -1690,7 +1701,7 @@ textarea {
 
 .label-price input {
     width: 30px;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
     font-weight: normal;
     font-size: 14px;
@@ -1855,20 +1866,26 @@ textarea {
 }
 
 .breadcrumbs a {
-  padding: 2px 8px;
   position: relative;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   cursor: pointer;
+  
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  vertical-align: top;
+  text-align: center;
+  padding: 4px;
     
 }
 
 .breadcrumbs a:first-of-type,
 .breadcrumbs a:last-of-type {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   vertical-align: top;
 }
@@ -1876,7 +1893,7 @@ textarea {
 .breadcrumbs a:first-of-type::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 8px;
     left: 5px;
     width: 9px;
     height: 9px;
@@ -1889,14 +1906,15 @@ textarea {
 
 .breadcrumbs a[class="disabled-breadcrumbs"]::before,
 .breadcrumbs a[class="disabled-breadcrumbs"]::after {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: default;
 }
 
 .breadcrumbs a:last-of-type::after {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 8px;
     right: 5px;
     width: 9px;
     height: 9px;
@@ -2022,6 +2040,7 @@ textarea {
 
 .table-img img {
   border-radius: 50%;
+  width: 30px;
 }
 
 
@@ -2156,7 +2175,7 @@ a.catalog-item-name:active {
 
 .subscription input {
   width: 368px;
-  margin-right: 9px;
+  
 }
 
 .address {
@@ -2243,4 +2262,8 @@ a.catalog-item-name:active {
 
 .rub {
   margin: 0 2px;
+}
+.form-subscription {
+  display: flex;
+  justify-content: space-between;
 }
