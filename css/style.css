@@ -194,10 +194,11 @@ a {
   background-image: url("../img/wafer2.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+  background-color: rgb(239, 228, 206);
   border-radius: 15px;
   margin-bottom: 40px;
   margin-top: 5px;
-  padding: 25px 20px 23px 20px;    
+  padding: 25px 25px 23px 20px;    
 
 }
 
@@ -253,6 +254,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/strawberry-background2.jpg");  
   background-position: -51px -224px;    
   background-repeat: no-repeat;
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
   margin-right: 26px;
   padding: 24px 20px;
@@ -471,22 +473,28 @@ input[type="radio"].visually-hidden {
   padding: 20px 25px 20px 27px;  
 }
 
+.desc-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 
 .desc-list li{
-  display: inline-block;
-  width: 535px;
-  vertical-align: top;
+  /*display: inline-block;
+  
+  vertical-align: top;*/
   margin-top: 9px;
  
   padding-left: 57px;
   padding-top: 13px;
+  width: 535px;
   
 }
 
-.desc-list li:nth-of-type(2n+1){
+/*.desc-list li:nth-of-type(2n+1){
  margin-right: 27px;
-}
+}*/
 
 .desc-item-icecream {
   background-image: url("../img/icecream-item.svg");
@@ -879,7 +887,7 @@ section.feedback-popup {
   
 }
 
-.user-navigation a:hover+.login-popup {
+.user-navigation:hover .login-popup {
   position: absolute;
   display: block;
 }
@@ -936,10 +944,11 @@ section.feedback-popup {
   width: 100%;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  padding: 13px;
+  padding: 0 13px;
   font-weight: bold;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 14px;
+  height: 45px;
 }
 
 .popup-style input::-webkit-input-placeholder,
@@ -1206,7 +1215,7 @@ textarea {
   height: 22px;
   background-color: rgba(0,0,0, 0);
   font-size: 0;
-
+  cursor: pointer;
   border: 0;
 
 }
@@ -1386,18 +1395,14 @@ textarea {
 }
 
 .raspberries {
-  background: url("../img/raspberries-background.jpg") no-repeat;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-right: 26px;
+  background: url("../img/raspberries-background2.jpg") repeat-y;
+  background-color: rgb(117, 13, 46);
 }
 
 .chocolate {
-    background: url("../img/chocolate-background.jpg") no-repeat;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  background: url("../img/chocolate-background2.jpg") repeat-y;
+  background-color: rgb(85, 51, 24);
+  
 }
 
 .sale-flex {
@@ -1418,12 +1423,13 @@ textarea {
 
 .sale-flex div {
   width: 560px; 
-  height: 229px;
+  min-height: 229px;
   border-radius: 15px;
 }
 
 .sale-style {
   padding: 17px 20px 17px 19px;
+  text-align: right;
 }
 
 .sale h2 {
@@ -1432,6 +1438,7 @@ textarea {
   font-size: 35px;
   line-height: 41px;
   padding-bottom: 15px;
+  text-align: left;
 }
 
 .sale p {
@@ -1440,10 +1447,11 @@ textarea {
   font-size: 18px;
   line-height: 22px;
   min-height: 86px;
+  text-align: left;
 }
 
 .sale a {
-  float: right;
+ 
   font-size: 18px;
   line-height: 24px;
   padding: 12px 22px;
