@@ -83,7 +83,7 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode===27) {
      evt.preventDefault();
     if (modal.classList.contains("modal-show-anim")) {
-      modal.classList.remove("modal-show");
+      modal.classList.remove("modal-show-anim");
       overlay.classList.remove("overlay-show");
     }
   }
