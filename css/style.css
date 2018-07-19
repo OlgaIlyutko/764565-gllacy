@@ -466,7 +466,16 @@ input[type="radio"].visually-hidden {
 .subscription {
   width: 560px;
   min-height: 221px;
-  background-image: url("../img/subscription.png");
+  /*background-image: url("../img/subscription.png");*/
+   background-image: linear-gradient(#f8f7f4 0px, #f8f7f4 100px),
+                     repeating-linear-gradient(135deg, #f8f7f4 0px, #f8f7f4 5px, #91cdff 5px, #91cdff 10px, #f8f7f4 10px, #f8f7f4 15px, #fe9e90 15px, #fe9e90 20px);
+ 
+  background-position:
+        5px 5px,
+        0 0;
+  
+  background-size: 550px 210px,
+                    100% 100%;
  
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -579,20 +588,22 @@ input[type="radio"].visually-hidden {
 
 
 section.feedback-popup {
- 
  position: fixed;
- top: 337px;
- left: 50%;
  width: 478px;
+ height: 441px;
  padding: 16px 25px 25px 25px;
  margin-left: -240px;
+ margin-top: -220px;
  z-index: 4;
  -webkit-box-shadow: none;
          box-shadow: none;
  border-radius: 10px;
-  
-}
+ left: -500px;
+ top: -500px;
 
+ transform: scale(0);  
+
+}
 
 
 
@@ -881,7 +892,7 @@ section.feedback-popup {
   background-color: #f8f7f4;
   border-radius: 5px;
   z-index: 2;
-  display: none;
+  
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   
@@ -934,6 +945,7 @@ section.feedback-popup {
   padding: 21px 18px 15px 18px;
   top: 35px;
   right: 0px;
+  display: none;
 }
 
 
@@ -997,6 +1009,7 @@ section.feedback-popup {
   padding: 20px 15px;
   top: 35px;
   right: 0px;
+  display: none;
 }
 
 .popup-style input:hover,
@@ -1243,10 +1256,19 @@ textarea {
           transform: rotate(-45deg);
 }
 
+.feedback-popup p:not(:last-of-type) {
+  margin-right: 161px;
+
+ }
+
+
+
 .feedback-popup input {
-  width: 267px;
+
   border: 1px solid #b2b2b2;
+
 }
+
 
 .feedback-popup textarea {
   height: 155px;
@@ -1981,7 +2003,7 @@ textarea {
 
   top: 35px;
   right: 0;
- /* display: none;*/
+  display: none;
   padding: 13px 12px;
 }
 
@@ -2274,4 +2296,35 @@ a.catalog-item-name:active {
 .form-subscription {
   display: flex;
   justify-content: space-between;
+}
+
+.feedback-popup.modal-show-anim {
+    transform: scale(1);
+    left: 50%;
+    top: 50%;
+    transition: all 1s ease-in-out 0.1s;
+}
+
+.overlay-show {
+  display: block;
+}
+
+input.input-error {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  transition: all 1s ease-out;
+}
+
+.map-full {
+  display: none;
+  z-index: 4;
+  position: fixed;
+  margin-left: -375px;
+  left: 50%;
+  margin-top: -240px;
+  top: 50%;
+}
+
+.modal-show {
+  display:block;
 }
