@@ -38,11 +38,13 @@ close_but.addEventListener("click", function (evt) {
   modal.classList.remove("modal-show-anim");
   overlay.classList.remove("overlay-show");
   
-  if (modal.classList.contains("modal-error")) {
-   modal.classList.remove("modal-error");
+  if (in_name.classList.contains("input-error")) {
+    in_name.classList.remove("input-error");
   }
 
-
+  if (in_email.classList.contains("input-error")) {
+    in_email.classList.remove("input-error");
+  }
 });
 
 
@@ -52,12 +54,26 @@ overlay.addEventListener("click", function (evt) {
   modal.classList.remove("modal-show-anim");
   overlay.classList.remove("overlay-show");
   
-   if (modal.classList.contains("modal-error")) {
-   modal.classList.remove("modal-error");
+  if (in_name.classList.contains("input-error")) {
+    in_name.classList.remove("input-error");
   }
 
+  if (in_email.classList.contains("input-error")) {
+    in_email.classList.remove("input-error");
+  }
 });
 
+
+in_name.addEventListener("click", function(evt) {
+     if (in_name.classList.contains("input-error")) {
+    in_name.classList.remove("input-error");
+  } });
+
+
+in_email.addEventListener("click", function(evt) {
+     if (in_email.classList.contains("input-error")) {
+    in_email.classList.remove("input-error");
+  }});
 
 
 
@@ -69,10 +85,6 @@ window.addEventListener("keydown", function (evt) {
     if (modal.classList.contains("modal-show-anim")) {
       modal.classList.remove("modal-show-anim");
       overlay.classList.remove("overlay-show");
-        if (modal.classList.contains("modal-error")) {
-        modal.classList.remove("modal-error");
-        }
-
     }
   }
 });
@@ -83,10 +95,13 @@ form.addEventListener("submit", function(evt) {
   
    if (!in_name.value||!in_email.value) {
      evt.preventDefault();
-     modal.classList.remove("modal-error");
-     modal.offsetWidth = modal.offsetWidth;
-     modal.classList.add("modal-error");
-    }
+     if (!in_name.value) {
+       in_name.classList.add("input-error");
+     }
+     if (!in_email.value) {
+       in_email.classList.add("input-error");
+     }
+   }
   else 
     {
     if (isStorageSupport) {
