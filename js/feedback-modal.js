@@ -24,8 +24,8 @@ add_but.addEventListener("click", function (evt) {
 
   
  if (storage) {
-    in_name.value = storage;                    /*кажется это не работает*/
-    in_email.focus();
+    in_name.value = storage;                     
+	 in_email.focus();
   }
   else {
   in_name.focus();
