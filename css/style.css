@@ -87,9 +87,9 @@ a {
 .menu-footer a:hover, 
 .menu-footer a:focus, 
 .menu-footer a:active, 
-.copyright a:hover, 
-.copyright a:focus, 
-.copyright a:active {
+.academy-button :hover, 
+.academy-button a:focus, 
+.academy-button a:active {
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
@@ -267,13 +267,13 @@ input[type="radio"].visually-hidden {
 }
 
 .copyright, 
-.copyright a {
+.academy-button {
     font-size: 12px;
     line-height: 18px;
     color: #fefefe;
 }
 
-.copyright a {
+.academy-button {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -434,7 +434,7 @@ input[type="radio"].visually-hidden {
 }
 
 .desc-list li {
-    margin-top: 10px;
+    margin-top: 5px;
     padding-left: 57px;
     padding-top: 13px;
     padding-bottom: 3px;
