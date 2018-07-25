@@ -631,7 +631,7 @@ section.feedback-popup {
     padding-right: 19px;
     background-color: rgba(255,255,255, 0.2);
     border-radius: 20px;
-    height: 36px;
+    min-height: 36px;
 }
 
 .social-button-inst {
@@ -1325,6 +1325,7 @@ textarea {
 
 .filter-item input:focus + label::before {
    outline: -webkit-focus-ring-color auto 5px;
+   outline: dotted thin;
 }
 
 .f-fat {
@@ -1567,7 +1568,7 @@ textarea {
 
 .f-content {
     margin-top: 17px;
-	width: 697px;
+	width: 698px;
 }
 
 .f-button {
